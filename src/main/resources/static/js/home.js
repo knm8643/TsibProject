@@ -1,7 +1,7 @@
 var mainLogin = Vue.createApp({
     el: "#mainLogin",
     components: {
-        modal
+
     },
     data() {
         return {
@@ -43,6 +43,8 @@ var mainLogin = Vue.createApp({
             importPage('modal');
         },
         closeModal() {
+            //뷰 통신 성공 *^^*
+            modal._component.method.ModalcloseModal();
             $("#modal").hide();
         },
 
