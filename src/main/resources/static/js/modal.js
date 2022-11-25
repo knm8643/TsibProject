@@ -9,8 +9,8 @@ var modal = Vue.createApp({
         }
     },
     method : {
-        closeModal() {
-            alert('sibal');
+        ModalcloseModal() {
+            alert('sibal1');
         }
     }
-}).mount('#modal')
+})
