@@ -6,11 +6,20 @@ var modal = Vue.createApp({
         return {
             userId:'',
             userPw:'',
+            privateName:'',
+            company:'',
+            privateEmail:'',
+            privateBirt:'',
         }
     },
     method : {
         ModalcloseModal() {
-            alert('sibal1');
-        }
+            $("#modal").hide();
+        },
+        sendMemberInfos() {
+            var $this = this;
+            console.log($("#privateName").val());
+            console.log($this.privateName,$this.company,$this.privateEmail,$this.privateBirt);
+        },
     }
 })

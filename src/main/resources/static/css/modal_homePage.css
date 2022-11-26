@@ -1,0 +1,65 @@
+#modal_homePage.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+/*팝업창 크기 및 정보에 관해서는 이곳 */
+#modal_homePage .modal-window {
+    background: #F6F6F6;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 350px;
+    /*height: 350px;*/
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 10px;
+}
+#modal_homePage .title {
+    text-align: center;
+    padding-left: 10px;
+    display: inline;
+    text-shadow: 1px 1px 2px gray;
+    color: white;
+
+}
+#modal_homePage .title h2 {
+    display: inline;
+}
+#modal_homePage .close-area {
+    display: inline;
+    float: right;
+    padding-right: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray;
+    color: white;
+}
+
+/*팝업창 인풋박스 */
+#modal_homePage .content {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0px 10px;
+    text-shadow: 1px 1px 2px gray;
+    /*color: white;*/
+}
+
+/*팝업창 서브밋박스*/
+#modal_homePage. content button{
+
+}

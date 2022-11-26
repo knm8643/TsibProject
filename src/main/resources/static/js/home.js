@@ -9,6 +9,10 @@ var mainLogin = Vue.createApp({
             deviceType: '',
             userId:'',
             userPw:'',
+            privateName:'',
+            company:'',
+            privateEmail:'',
+            privateBirt:'',
         }
     },
     methods: {
@@ -45,9 +49,11 @@ var mainLogin = Vue.createApp({
         closeModal() {
             //뷰 통신 성공 *^^*
             modal._component.method.ModalcloseModal();
-            $("#modal").hide();
         },
 
+        sendMemberInfos(){
+            modal._component.method.sendMemberInfos();
+        },
         // 수정필요한 펑션은 이 아래부터 작업해주세요 //
         readPop() {
             // 모달팝업창 클릭시 움직이기 위해 만든 펑션(현재포기)
