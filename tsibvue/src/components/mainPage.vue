@@ -1,5 +1,5 @@
 <template>
-  <div class="mainBody" v-if="openMain">
+  <div id="mainBody" style="display:none;">
     새로운 메인 페이지! 이런식으로 만들어가면 되는걸까?<br>
     하나의 index.html 안에서 템플릿만 바꾸는 느낌?<br>
     <button>click</button>
@@ -13,12 +13,16 @@ export default {
   },
   data(){
     return{
-       openMain: false
+       openMain: true
     }
   },
   methods:{
     thisMainPage(mainOff){
       this.openMain = (mainOff=="false")?true:false;
+      if(this.openMain){
+        console.log(this.openMain)
+        document.getElementById("mainBody").style.display = "show";
+      }
       console.log("OPEN MAIN! 왜 안떠 SIBAL!");
     }
   }
