@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" v-if="mainOff">
     <h1>{{ msg }}</h1>
     <p id="tmp">
       애들아 버튼을 한번 눌러봐 그리고 콘솔창에 SYSOUT 헬로월드가 있는지 확인해봐!<br>
@@ -8,17 +8,26 @@
       <a href="https://velog.io/@aimzero9303/Vue-20.-%EC%84%9C%EB%B2%84%EB%A1%9C-ajax-%EC%9A%94%EC%B2%AD%ED%95%B4%EB%B3%B4%EC%9E%90..-feat.-axios">Ajax-Axios 설치 법</a><br>
       <a href="https://jhhan009.tistory.com/33">vue-spring 연결</a>
     </p>
-    <div><button @click="sendSpring()">SPRING</button></div>
+    <div>
+      <button @click="sendSpring()">SPRING TEST</button>
+      <button @click="goMainPage()">GO MAIN PAGE</button>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import mainPage from "@/components/mainPage";
 
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data(){
+    return{
+      mainOff : true
+    }
   },
   methods:{
     sendSpring(){
@@ -30,11 +39,16 @@ export default {
         }
       }).then((response) => {
         if(response.data){
-          document.getElementById('tmp').innerHTML=response.data;
+          document.getElementById('tmp').innerHTML= response.data;
+          console.log("Hello World!");
         }else{
           console.log("Fail");
         }
       });
+    },
+    goMainPage(){
+        this.mainOff = false;
+        mainPage.methods.thisMainPage("false");
     }
   }
 }
