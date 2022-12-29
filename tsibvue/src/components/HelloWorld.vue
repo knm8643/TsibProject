@@ -30,6 +30,7 @@ export default {
     }
   },
   methods:{
+    //<!-- 스프링 연결 테스트 -->
     sendSpring(){
       axios({
         url: "/springTestController/test",
@@ -46,6 +47,7 @@ export default {
         }
       });
     },
+    //<!-- 새로운 페이지 불러오기 -->
     goMainPage(){
         this.mainOff = false;
         mainPage.methods.thisMainPage("false");
@@ -54,7 +56,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
