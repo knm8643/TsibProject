@@ -1,8 +1,8 @@
 <template>
   <div id="mainBody" style="display:none;">
-    새로운 메인 페이지! 이런식으로 만들어가면 되는걸까?<br>
-    하나의 index.html 안에서 템플릿만 바꾸는 느낌?<br>
-    <button @click="noticePage()">게시판 보기!</button>
+    <h1>{{ msg }}</h1>
+    <p>this here mainBody!</p>
+    <button @click="noticePage()">look Notice!</button>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
 export default {
   name: "mainPage",
   props:{
+    msg : String
   },
   data(){
     return{

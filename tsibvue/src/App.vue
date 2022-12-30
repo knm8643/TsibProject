@@ -1,6 +1,6 @@
 <template>
-  <HelloWorld msg="Hello World"/>
-  <mainPage/>
+  <HelloWorld msg="튜토리얼"/>
+  <mainPage msg="메인"/>
 </template>
 
 <script>
