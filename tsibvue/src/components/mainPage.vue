@@ -42,7 +42,11 @@ export default {
       if(this.openMain){
         document.getElementById("mainBody").style.display = "block";
       }
-      console.log("Open Main!");
+      console.log("#####     ####     ####     #      ####     #####");
+      console.log("#        #        #        # #     #   #    #");
+      console.log("#####     ###     #       #####    ####     #####");
+      console.log("#            #    #       #   #    #        #");
+      console.log("#####    ####      ####   #   #    #        #####");
     }
   }
 }
