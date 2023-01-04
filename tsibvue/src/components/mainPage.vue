@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <p><span @click="noticeInput('로그인 정보')">새글 등록하기</span></p>
+    <p><span @click="noticeInput()">새글 등록하기</span></p>
     <div class="noticeList">
        <!-- 임시 CSS -->
        <!-- 임시 반복문1 -->
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: "mainPage",
   props:{
@@ -42,21 +43,14 @@ export default {
     }
   },
   methods:{
-    noticeInput(userInfo){
-      // 임시 더미 데이터
-      var userInfoTmp = "";
-      if(userInfo == "로그인 정보") {
-        userInfoTmp =
-            {
-               userNo : "0000",
-               userName : "이충재",
-               userEmail : "TEST@TEST.COM",
-               userNickName : "knm8643"
-            }
-      }
-      // 더미 삭제 예정
-      console.log(userInfoTmp);
-      console.log("--새글 등록하기 제작중--");
+    noticeInput(){
+      axios({
+        url: "/board/inputBoard",
+        method: "post",
+        params: {userNo: "0000", userName: "테스트", userEmail: "TEST@TEST.COM", userNickName: "TEST"}
+      }).then((response) => {
+        if (response) console.log(response);
+      });
     },
     noticeSwiper(){
       alert("게시판 스와이퍼는 아직입니다!");
@@ -69,11 +63,6 @@ export default {
       if(this.openMain){
         document.getElementById("mainBody").style.display = "block";
       }
-      console.log("#####     ####     ####     #      ####     #####");
-      console.log("#        #        #        # #     #   #    #");
-      console.log("#####     ###     #       #####    ####     #####");
-      console.log("#            #    #       #   #    #        #");
-      console.log("#####    ####      ####   #   #    #        #####");
     }
   }
 }
