@@ -5,24 +5,25 @@
     <div class="noticeSwiperBox">
       <div id="notice_swiper_list" @click="noticeSwiper()" style="border: 1px solid black; height: 200px; width: 200px; margin: auto;">
         <div>
-            <img src="@/assets/일어나2.jpeg" style="object-fit: cover; width: 100%; height: 100%;">
-            <div style="margin-top: 10px;">스와이퍼 리스트</div>
+            <img src="">
+            <div>스와이퍼 리스트</div>
         </div>
       </div>
     </div>
-    <p><span @click="noticeInput()">새글 등록하기</span></p>
+    <div>
+      <p id="inputSpan"><span @click="noticeInputOpen()">새글 등록하기</span></p>
+      <inputNotice></inputNotice>
+    </div>
     <div class="noticeList">
        <!-- 임시 CSS -->
        <!-- 임시 반복문1 -->
        <div id="notice" @click="noticePage()" style="border: 1px solid black; height: 300px; width: 250px; margin: auto;">
          <div>
            <div id="notice_img" style="height: 180px;">
-             <img src="@/assets/일어나.jpeg" style="object-fit: cover; width: 100%; height: 100%;">
+             <img src="">
            </div>
            <div id="noticeTry" style="margin-top: 20px;">
-             일어나 애들아 코딩해야지?<br>
-             게시판 리스트<br>
-             (더미 테스트용)
+             게시판 리스트(테스트용)
            </div>
          </div>
        </div>
@@ -31,7 +32,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import inputNotice from '@/components/inputNotice';
 export default {
   name: "mainPage",
   props:{
@@ -42,15 +43,13 @@ export default {
        openMain: true
     }
   },
+  components:{
+    inputNotice
+  },
   methods:{
-    noticeInput(){
-      axios({
-        url: "/board/inputBoard",
-        method: "post",
-        params: {userNo: "0000", userName: "테스트", userEmail: "TEST@TEST.COM", userNickName: "TEST"}
-      }).then((response) => {
-        if (response) console.log(response);
-      });
+    noticeInputOpen(){
+       document.getElementById("inputSpan").style.display = "none";
+       inputNotice.methods.openNoticePage();
     },
     noticeSwiper(){
       alert("게시판 스와이퍼는 아직입니다!");

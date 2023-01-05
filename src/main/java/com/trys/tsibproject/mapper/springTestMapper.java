@@ -5,5 +5,5 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 public interface springTestMapper {
-//    public int insertTestMapper()
+    public String insertTestMapper(String userName);
 }

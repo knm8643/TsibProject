@@ -12,7 +12,7 @@ public class BoardService {
     @Autowired
     private BoardDAO boardDAO;
 
-//    public String boardInsert(TEST) throws Exception{
-//        return boardDAO.boardInsert(TEST);
-//    }
+    public String boardInsert(String userName){
+        return boardDAO.boardInsert(userName);
+    }
 }

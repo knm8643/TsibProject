@@ -3,6 +3,13 @@
 
 <mapper namespace="com.trys.tsibproject.mapper.springTestMapper">
     <insert id="insertTestMapper">
-        insert into member (mem_no) values ('TEST')
+        insert into TsibProject.test (mem_name) values (#{userName})
     </insert>
 </mapper>
+
+<!--        테스트 테이블 -->
+<!--        아래 이거 각자 디비에 복붙에서 만들어보고 시험해봐 이제 모든 연결은 끝났다. -->
+
+<!--        CREATE TABLE TsibProject.test(-->
+<!--        mem_name varchar(50)-->
+<!--        );-->
