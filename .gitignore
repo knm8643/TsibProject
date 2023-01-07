@@ -9,6 +9,7 @@ maven-wrapper.properties
 mvnw.cmd
 mvnw
 pom.xml
+tsibvue/vue.config.js
 
 ### STS ###
 .apt_generated
