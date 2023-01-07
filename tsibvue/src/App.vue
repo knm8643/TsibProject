@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="튜토리얼"/>
+  <HelloWorld msg="튜토리얼!"/>
   <mainPage msg="메인"/>
 </template>
 
