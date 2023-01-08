@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunktsibvue"]=self["webpackChunktsibvue"]||[]).push([[1],{411:function(e,n,t){t.r(n),t.d(n,{default:function(){return i}});var u=t(3396);function r(e,n,t,r,s,a){return(0,u.wg)(),(0,u.iD)("h1",null,"post page")}var s={name:"PostPage"},a=t(89);const c=(0,a.Z)(s,[["render",r]]);var i=c}}]);
+//# sourceMappingURL=post.ab059b9d.js.map
