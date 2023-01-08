@@ -1,22 +1,19 @@
 <template>
-  <HelloWorld msg="튜토리얼!"/>
-  <mainPage msg="메인"/>
+  <nav>
+    <router-link to="/">Home</router-link>
+    <router-link to="/main">Main</router-link>
+  </nav>
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import mainPage from "./components/mainPage.vue";
-
 export default {
   name: 'App',
   data(){
     return{
-      openMain : false
     }
   },
   components: {
-    HelloWorld,
-    mainPage
   }
 }
 </script>
