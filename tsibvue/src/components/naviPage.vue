@@ -5,14 +5,20 @@
 <!--    <span id="navi_login" @click="gologin()">로그인</span> &nbsp;-->
 <!--    <span id="navi_mypage" @click="gomypage()">마이페이지</span> &nbsp;-->
 <!--  </div>-->
-  <div class="navi_list">
-    <span id="navi_home"><router-link to="/">초기화면</router-link></span> &nbsp;
-    <span id="navi_main"><router-link to="/main">메인</router-link></span> &nbsp;
-    <span id="navi_intro"><router-link to="/credit">만든이</router-link></span> &nbsp;
-    <span id="navi_login"><router-link to="/login">로그인</router-link></span> &nbsp;
-    <span id="navi_mypage"><router-link to="/mypage">마이페이지</router-link></span> &nbsp;
-    <span id="navi_post"><router-link to="/post">글쓰기페이지</router-link></span> &nbsp;
-  </div>
+  <header>
+    <h1>
+      블로그 만드는 블로그
+    </h1>
+    <ul class="navi_list">
+      <span id="navi_home"><router-link to="/">초기화면</router-link></span> &nbsp;
+      <span id="navi_main"><router-link to="/main">메인</router-link></span> &nbsp;
+      <span id="navi_intro"><router-link to="/credit">만든이</router-link></span> &nbsp;
+      <span id="navi_login"><router-link to="/login">로그인</router-link></span> &nbsp;
+      <span id="navi_mypage"><router-link to="/mypage">마이페이지</router-link></span> &nbsp;
+      <span id="navi_post"><router-link to="/post">글쓰기페이지</router-link></span> &nbsp;
+    </ul>
+  </header>
+
 </template>
 
 <script>
@@ -50,7 +56,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
  /* 임시 CSS */
  span {
    cursor: pointer;
