@@ -1,6 +1,7 @@
 <template>
   <div id="hello">
     <h1>{{ msg }}</h1>
+    <h5>{{ notice }}</h5>
     <p id="tmp">
       1. <a href="https://velog.io/@aimzero9303/Vue-20.-%EC%84%9C%EB%B2%84%EB%A1%9C-ajax-%EC%9A%94%EC%B2%AD%ED%95%B4%EB%B3%B4%EC%9E%90..-feat.-axios">SPRING-VUE 통신하기</a><br>
       2. <a href="https://jhhan009.tistory.com/33">AXIOS 설치하기</a><br>
@@ -18,12 +19,17 @@ import axios from 'axios';
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: {
+      type: String,
+      default: '현재 임시 초기화면입니다.'
+    },
+    notice: {
+      type: String,
+      default: '프로젝트 진행에 있어 필요한 참고자료를 어떠한 방식이든 자유롭게 넣어주세요!'
+    },
   },
   data(){
-    return{
-      mainOff : true
-    }
+    return{}
   },
   methods:{
     //<!-- 스프링 연결 테스트 -->
@@ -64,5 +70,8 @@ li {
 }
 a {
   color: #42b983;
+}
+#hello {
+  margin-bottom: 30px;
 }
 </style>
