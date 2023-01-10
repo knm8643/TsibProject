@@ -1,12 +1,35 @@
 <template>
   <div class="전체글구역">
     <div id="미리보기전체구역">
-      <div id="제목미리보는구역">{{title}}</div>
-      <div id="내용미리보는구역">{{content}}</div>
+      <div id="미리보기버튼구역">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <input type="file">
+      </div>
+      <div id="미리보기태그구역">
+        #태그_예시1, #태그_예시2, #태그_예시3,
+        {{ tag ? "#" + tag : "" }}
+      </div>
+      <div id="미리보기제목구역">{{ title }}</div>
+      <div id="미리보기내용구역">{{ content }}</div>
     </div>
     <div id="글쓰기전체구역">
-      <textarea id="제목쓰는구역" type="text" v-model="title" placeholder="제목을 입력하세요. 작성하신 내용은 좌측 미리보기로 확인 가능합니다. (제목은 글씨크게)"></textarea>
-      <textarea id="내용쓰는구역" type="text" v-model="content" placeholder="글을 입력하세요. 작성하신 내용은 좌측 미리보기로 확인 가능합니다. (내용은 글씨작게)"></textarea>
+      <div id="글쓰기버튼구역">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <input type="file">
+      </div>
+      <div id="글쓰기태그지정구역">
+        <label style="color:white;">태그 할 내용을 적어주세요:&nbsp;&nbsp;#</label>
+        <input type="text" v-model="tag" placeholder="공백 없이 작성해주세요.">
+      </div>
+      <div id="글쓰기태그구역">
+        #태그_예시1,#태그_예시2, #태그_예시3
+      </div>
+      <textarea id="글쓰기제목구역" type="text" v-model="title" placeholder="제목을 입력하세요. 작성하신 내용은 좌측 미리보기로 확인 가능합니다."></textarea>
+      <textarea id="글쓰기내용구역" type="text" v-model="content" placeholder="글을 입력하세요. 작성하신 내용은 좌측 미리보기로 확인 가능합니다."></textarea>
     </div>
   </div>
   <div id="저장버튼구역">
@@ -23,7 +46,8 @@ export default {
   data() {
     return {
       title: "",
-      content: ""
+      content: "",
+      tag: ""
     }
   },
   methods: {
@@ -32,7 +56,7 @@ export default {
         content: this.content
       })
           .then(function(response){
-            alert('저장이 완료되었습니다.');
+            alert('저장되었습니다.');
             console.log(response);
           })
           .catch(function(error){
@@ -44,7 +68,8 @@ export default {
 }
 </script>
 
-<style scoped> /* 임시 */
+<style scoped>
+/* 전체 */
 .전체글구역{
   width: 100%;
   height: 400px;
@@ -54,62 +79,137 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+/* 미리보기 */
 #미리보기전체구역{
   background-color: whitesmoke;
-  border: 1px solid dimgrey;
   width: 49%;
   height: 350px;
   float: left;
+  overflow: hidden;
 
   /* 가로, 세로 가운데 정렬 */
   display: inline-block;
   justify-content: center;
   align-items: center;
 }
-#제목미리보는구역{
+
+/* 미리보기 버튼 */
+#미리보기버튼구역{
+  width: 100%;
+  height: 10%;
+  background-color: powderblue;
+
+
+  /* 가로, 세로 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 미리보기 태그 */
+#미리보기태그구역{
+  width: 100%;
+  height: 20%;
+  background-color: darkseagreen;
+  color: white;
+
+  /* 가로, 세로 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 미리보기 제목 */
+#미리보기제목구역{
   background-color: dimgrey;
   width: 100%;
-  height: 22%;
+  height: 20%;
   color: white;
   font-size: 1.4em;
+
+
+  /* 가로, 세로 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#내용미리보는구역{
+
+/* 미리보기 내용 */
+#미리보기내용구역{
   background-color: grey;
   width: 100%;
-  height: 78%;
+  height: 50%;
   color: white;
   font-size: 1.1em;
+
+
+  /* 가로, 세로 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* 글쓰기 */
 #글쓰기전체구역{
-  background-color: darkgrey;
-  border: 1px solid dimgrey;
   width: 49%;
   height: 350px;
   float: left;
+  overflow: hidden;
 
   /* 가로, 세로 가운데 정렬 */
   display: inline-block;
   justify-content: center;
   align-items: center;
 }
-#제목쓰는구역{
-  width: 99%;
+
+/* 글쓰기 버튼 */
+#글쓰기버튼구역{
+  width: 100%;
+  height: 10%;
+  background-color: #42b983;
+
+
+  /* 가로, 세로 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 글쓰기 태그 (작성하는 태그) */
+#글쓰기태그지정구역{
+  width: 100%;
+  height: 10%;
+  background-color: darkslategrey;
+
+  /* 가로, 세로 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 글쓰기 태그 (작성된 태그) */
+#글쓰기태그구역{
+  width: 100%;
+  height: 10%;
+  background-color: olive;
+  color: white;
+
+  /* 가로, 세로 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 글쓰기 제목 */
+#글쓰기제목구역{
+  width: 100%;
   height: 20%;
-  font-size: 1.4em;
-
-  /* textarea 데코레이션 제거 */
-  border: none;
-  overflow: auto;
-  outline: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-#내용쓰는구역{
-  width: 99%;
-  height: 76%;
   resize: none;
-  font-size: 1.1em;
+  padding: 0%;
+  font-size: 1.4em;
+  display: block;
+  background-color: antiquewhite;
 
   /* textarea 데코레이션 제거 */
   border: none;
@@ -119,6 +219,27 @@ export default {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
+/* 글쓰기 내용 */
+#글쓰기내용구역{
+  width: 100%;
+  height: 560%;
+  resize: none;
+  padding: 0%;
+  font-size: 1.4em;
+  display: block;
+  background-color: navajowhite;
+
+  /* textarea 데코레이션 제거 */
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* 저장버튼 구역 */
 #저장버튼구역{
   width: 100%;
   height: 100px;
@@ -128,6 +249,8 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+/* 저장버튼 */
 #저장버튼{
   width: 100px;
   height: 40px;
