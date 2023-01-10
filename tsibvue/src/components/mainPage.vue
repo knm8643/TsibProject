@@ -11,8 +11,9 @@
       </div>
     </div>
     <div>
-      <p id="inputSpan"><span @click="noticeInputOpen()">새글 등록하기</span></p>
+      <p id="inputSpan"><span @click="noticeInputOpen()">새글 등록하기(기존 통신 테스트용)</span></p>
       <inputNotice></inputNotice>
+      <p><router-link to="/post" id="inputSpan2">새글 등록하기(링크용)</router-link></p>
     </div>
     <div class="noticeList">
        <!-- 임시 CSS -->
@@ -62,14 +63,14 @@ export default {
 
 <style>
 /* 임시 CSS */
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 3px;
-}
+/*#app {*/
+/*  font-family: Avenir, Helvetica, Arial, sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*  text-align: center;*/
+/*  color: #2c3e50;*/
+/*  margin-top: 3px;*/
+/*}*/
 #notice{
   cursor: pointer;
 }
@@ -78,5 +79,12 @@ export default {
 }
 span{
   cursor: pointer;
+}
+.noticeList{
+  margin-bottom: 25px;
+}
+#inputSpan2 {
+  text-decoration: none;
+  color: inherit;
 }
 </style>

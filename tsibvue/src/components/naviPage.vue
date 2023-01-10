@@ -4,7 +4,6 @@
       <router-link id="navi_title" to="/">블로그 만드는 블로그</router-link>
     </h3>
     <ul class="navi_list">
-      <span><router-link id="navi_home" to="/">초기화면</router-link></span> &nbsp;
       <span><router-link id="navi_main" to="/main">메인</router-link></span> &nbsp;
       <span><router-link id="navi_intro" to="/credit">만든이</router-link></span> &nbsp;
       <span><router-link id="navi_login" to="/login">로그인</router-link></span> &nbsp;
@@ -31,7 +30,7 @@ export default {
  span {
    cursor: pointer;
  }
- #navi_title, #navi_home, #navi_main, #navi_intro, #navi_login, #navi_mypage, #navi_post{
+ #navi_title, #navi_main, #navi_intro, #navi_login, #navi_mypage, #navi_post{
    text-decoration: none;
    color: inherit;
  }

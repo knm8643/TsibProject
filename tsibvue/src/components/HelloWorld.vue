@@ -1,10 +1,11 @@
 <template>
   <div id="hello">
     <h1>{{ msg }}</h1>
-    <h5>{{ notice }}</h5>
+    <h5>{{ notice1 }}</h5>
+    <h4>{{ notice2 }}</h4>
     <p id="tmp">
-      1. <a href="https://velog.io/@aimzero9303/Vue-20.-%EC%84%9C%EB%B2%84%EB%A1%9C-ajax-%EC%9A%94%EC%B2%AD%ED%95%B4%EB%B3%B4%EC%9E%90..-feat.-axios">SPRING-VUE 통신하기</a><br>
-      2. <a href="https://jhhan009.tistory.com/33">AXIOS 설치하기</a><br>
+      1. <a href="https://velog.io/@aimzero9303/Vue-20.-%EC%84%9C%EB%B2%84%EB%A1%9C-ajax-%EC%9A%94%EC%B2%AD%ED%95%B4%EB%B3%B4%EC%9E%90..-feat.-axios" target="_blank">SPRING-VUE 통신하기</a><br>
+      2. <a href="https://jhhan009.tistory.com/33" target="_blank">AXIOS 설치하기</a><br>
       3. tsibvue/src/ npm run build And start!
     </p>
     <div>
@@ -23,9 +24,13 @@ export default {
       type: String,
       default: '현재 임시 초기화면입니다.'
     },
-    notice: {
+    notice1: {
       type: String,
-      default: '프로젝트 진행에 있어 필요한 참고자료를 어떠한 방식이든 자유롭게 넣어주세요!'
+      default: '(현재 페이지로 돌아오시려면 최상단 타이틀을 눌러주세요.)'
+    },
+    notice2: {
+      type: String,
+      default: '프로젝트 진행에 있어 필요한 참고자료를 자유롭게 넣어주세요!'
     },
   },
   data(){
