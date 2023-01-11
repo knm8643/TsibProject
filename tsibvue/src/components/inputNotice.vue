@@ -26,10 +26,10 @@ export default {
         method: "post",
         params: {userName: this.memberName}
       }).then((response) => {
-        if (response.data == '01') {
-          alert('입력된 값이 없습니다.');
-        } else {
+        if (response.data == '02') {
           alert('입력에 성공했는데 디비 확인해봐');
+        } else {
+          alert('입력된 값이 없습니다.');
         }
       });
     }
