@@ -4,9 +4,10 @@
     <h5>{{ notice1 }}</h5>
     <h4>{{ notice2 }}</h4>
     <p id="tmp">
-      1. <a href="https://velog.io/@aimzero9303/Vue-20.-%EC%84%9C%EB%B2%84%EB%A1%9C-ajax-%EC%9A%94%EC%B2%AD%ED%95%B4%EB%B3%B4%EC%9E%90..-feat.-axios" target="_blank">SPRING-VUE 통신하기</a><br>
-      2. <a href="https://jhhan009.tistory.com/33" target="_blank">AXIOS 설치하기</a><br>
-      3. tsibvue/src/ npm run build And start!
+      1. <a href="https://velog.io/@aimzero9303/Vue-20.-%EC%84%9C%EB%B2%84%EB%A1%9C-ajax-%EC%9A%94%EC%B2%AD%ED%95%B4%EB%B3%B4%EC%9E%90..-feat.-axios" target="_blank">AXIOS 설치하기</a><br>
+      2. <a href="https://jhhan009.tistory.com/33" target="_blank">SPRING-VUE 통신하기</a><br>
+      3. tsibvue/src/ npm run build And start!<br>
+      4. 뷰만 따로 할시에는 vue.config 주석
     </p>
     <div>
       <button @click="sendSpring()">SPRING TEST</button>
@@ -54,9 +55,6 @@ export default {
         }
       });
     },
-    goMainPage(){
-      document.getElementById("hello").style.display = "none";
-    }
   }
 }
 </script>
@@ -72,9 +70,6 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 #hello {
   margin-bottom: 30px;

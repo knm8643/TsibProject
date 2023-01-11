@@ -34,4 +34,9 @@ export default {
    text-decoration: none;
    color: inherit;
  }
+ header{
+   #navi_title{
+     color: red;
+   }
+ }
 </style>

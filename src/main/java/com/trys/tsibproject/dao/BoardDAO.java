@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 public class BoardDAO {
 
     @Autowired
-    springTestMapper testmapper;
+    private springTestMapper testmapper;
 
-    public String boardInsert(String userName){
+    public int boardInsert(String userName){
         return testmapper.insertTestMapper(userName);
     }
 }

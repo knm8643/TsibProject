@@ -1,8 +1,5 @@
 <template>
-   <div id="inputNotice" style="display: none;">
-      <h3>게시판 작성페이지(값넘김 테스트 영역 지워도댐)</h3><br>
-      <input type="text" placeholder="작성자" v-model="memberName"><button @click="noticeInput()">전송</button>
-   </div>
+  <div></div>
 </template>
 
 <script>
@@ -16,7 +13,12 @@ export default {
   },
   methods:{
     openNoticePage(){
-      document.getElementById("inputNotice").style.display = "block";
+      this.memberName = prompt("디비에 저장할 정보를 입력해주세요.","");
+      if(this.memberName != null && this.memberName != ''){
+        this.noticeInput()
+      }else {
+        alert("입력하신 정보가 없습니다.");
+      }
     },
     noticeInput(){
       axios({
@@ -24,7 +26,11 @@ export default {
         method: "post",
         params: {userName: this.memberName}
       }).then((response) => {
-        if (response) console.log(response);
+        if (response.data == '01') {
+          alert('입력된 값이 없습니다.');
+        } else {
+          alert('입력에 성공했는데 디비 확인해봐');
+        }
       });
     }
   }

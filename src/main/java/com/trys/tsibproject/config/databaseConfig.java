@@ -1,4 +1,4 @@
-package com.trys.tsibproject.dto;
+package com.trys.tsibproject.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
