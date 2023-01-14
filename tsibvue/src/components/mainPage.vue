@@ -1,30 +1,26 @@
 <template>
   <div id="mainBody">
-    <h1>{{ msg }}</h1>
-    <!-- 임시 CSS -->
     <div class="noticeSwiperBox">
-      <div id="notice_swiper_list" @click="noticeSwiper()" style="border: 1px solid black; height: 200px; width: 200px; margin: auto;">
+      <div id="notice_swiper_list" @click="noticeSwiper()" style="height: 200px; width: 200px;">
         <div>
             <img src="">
             <div>스와이퍼 리스트</div>
         </div>
       </div>
     </div>
-    <div>
-      <p id="inputSpan"><span @click="noticeInputOpen()">%Spring Communication Example%</span></p>
-      <p><router-link to="/post" id="inputSpan2">새글 등록하기(링크용)</router-link></p>
-      <inputNotice></inputNotice>
+    <div class="noticeNavi">
+      <p>
+        <router-link to="/post" id="inputSpan2">새글등록(링크용)</router-link>
+      </p>
     </div>
     <div class="noticeList">
-       <!-- 임시 CSS -->
-       <!-- 임시 반복문1 -->
-       <div id="notice" @click="noticePage()" style="border: 1px solid black; height: 300px; width: 250px; margin: auto;">
+       <div id="notice" @click="noticePage()" style="height: 300px; width: 250px;">
          <div>
-           <div id="notice_img" style="height: 180px;">
+           <div id="notice_img">
              <img src="">
            </div>
-           <div id="noticeTry" style="margin-top: 20px;">
-             게시판 리스트(테스트용)
+           <div id="noticeTry">
+             <span>게시판 리스트(테스트용)</span>
            </div>
          </div>
        </div>
@@ -33,7 +29,6 @@
 </template>
 
 <script>
-import inputNotice from '@/components/inputNotice';
 export default {
   name: "mainPage",
   props:{
@@ -44,13 +39,9 @@ export default {
     }
   },
   components:{
-    inputNotice
+
   },
   methods:{
-    noticeInputOpen(){
-       document.getElementById("inputSpan").style.display = "none";
-       inputNotice.methods.openNoticePage();
-    },
     noticeSwiper(){
       alert("게시판 스와이퍼는 아직입니다!");
     },
@@ -61,22 +52,21 @@ export default {
 }
 </script>
 
-<style>
-/* 임시 CSS */
-#notice{
-  cursor: pointer;
+<style lang="scss" scoped>
+// 메인테마 구분선 추가
+#notice_swiper_list, #notice{
+  border: 1px solid black;
+  margin: auto;
 }
-#notice_swiper_list{
-  cursor: pointer;
-}
-span{
-  cursor: pointer;
-}
-.noticeList{
-  margin-bottom: 25px;
-}
-#inputSpan2 {
+
+// 밑줄 삭제
+a, router-link{
   text-decoration: none;
   color: inherit;
+}
+
+// 포인트 강조
+#notice, #notice_swiper_list, #inputSpan2{
+  cursor: pointer;
 }
 </style>

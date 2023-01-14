@@ -6,17 +6,22 @@
     <p id="tmp">
       1. <a href="https://velog.io/@aimzero9303/Vue-20.-%EC%84%9C%EB%B2%84%EB%A1%9C-ajax-%EC%9A%94%EC%B2%AD%ED%95%B4%EB%B3%B4%EC%9E%90..-feat.-axios" target="_blank">AXIOS 설치하기</a><br>
       2. <a href="https://jhhan009.tistory.com/33" target="_blank">SPRING-VUE 통신하기</a><br>
-      3. tsibvue/src/ npm run build And start!<br>
-      4. 뷰만 따로 할시에는 vue.config 주석
+      3. 스프링vue 연결 시에는 tsibvue/src/ npm run build 진행 후 스프링 빌드 And start!<br>
+      4. 뷰만 따로 할시에는 vue.config 주석 후 tsibvue/src/ npm run serve
     </p>
     <div>
-      <button @click="sendSpring()">SPRING TEST</button>
+      <p id="inputSpan">
+        <button @click="noticeInputOpen()">%Spring Communication Example1%</button>
+      </p>
+      <button @click="sendSpring()">%Spring Communication Example2%</button>
+      <inputNotice></inputNotice>
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import inputNotice from '@/components/inputNotice';
 
 export default {
   name: 'HelloWorld',
@@ -38,7 +43,6 @@ export default {
     return{}
   },
   methods:{
-    //<!-- 스프링 연결 테스트 -->
     sendSpring(){
       axios({
         url: "/springTestController/test",
@@ -54,6 +58,9 @@ export default {
           console.log("Fail");
         }
       });
+    },
+    noticeInputOpen(){
+      inputNotice.methods.openNoticePage();
     },
   }
 }

@@ -27,9 +27,9 @@ export default {
         params: {userName: this.memberName}
       }).then((response) => {
         if (response.data == '02') {
-          alert('입력에 성공했는데 디비 확인해봐');
+          alert('입력에 성공했습니다 디비 확인해주세요');
         } else {
-          alert('입력된 값이 없습니다.');
+          alert('입력된 값이 없습니다. 테스트 테이블은 설정하셨나요?');
         }
       });
     }
