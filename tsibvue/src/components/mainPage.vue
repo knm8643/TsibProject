@@ -1,29 +1,10 @@
 <template>
   <div id="mainBody">
-    <!--반목문 돌릴 예정 1-->
     <div class="noticeSwiperBox">
-      <div id="notice_swiper_list" @click="noticeSwiper()">
+      <div id="notice_swiper_list" v-for="(swiperitem, index) in noticeSwiperlist" v-bind:key="index" @click="noticeSwiper()">
         <div>
           <img src="">
-          <div>스와이퍼 리스트1(위치확인)</div>
-        </div>
-      </div>
-      <div id="notice_swiper_list" @click="noticeSwiper()">
-        <div>
-          <img src="">
-          <div>스와이퍼 리스트2(위치확인)</div>
-        </div>
-      </div>
-      <div id="notice_swiper_list" @click="noticeSwiper()">
-        <div>
-          <img src="">
-          <div>스와이퍼 리스트3(위치확인)</div>
-        </div>
-      </div>
-      <div id="notice_swiper_list" @click="noticeSwiper()">
-        <div>
-          <img src="">
-          <div>스와이퍼 리스트4(위치확인)</div>
+          <div>스와이퍼 리스트{{swiperitem}}(위치확인)</div>
         </div>
       </div>
     </div>
@@ -34,45 +15,14 @@
         </p>
       </div>
     </div>
-    <!--반목문 돌릴 예정 2-->
     <div class="noticeList">
-      <div id="notice" @click="noticePage()">
+      <div id="notice" v-for="(noticeitem, index) in noticelist" v-bind:key="index" @click="noticePage()">
         <div>
           <div id="notice_img">
             <img src="">
           </div>
           <div id="noticeTry">
-            <span>게시판 리스트(위치확인1)</span>
-          </div>
-        </div>
-      </div>
-      <div id="notice" @click="noticePage()">
-        <div>
-          <div id="notice_img">
-            <img src="">
-          </div>
-          <div id="noticeTry">
-            <span>게시판 리스트(위치확인2)</span>
-          </div>
-        </div>
-      </div>
-      <div id="notice" @click="noticePage()">
-        <div>
-          <div id="notice_img">
-            <img src="">
-          </div>
-          <div id="noticeTry">
-            <span>게시판 리스트(위치확인3)</span>
-          </div>
-        </div>
-      </div>
-      <div id="notice" @click="noticePage()">
-        <div>
-          <div id="notice_img">
-            <img src="">
-          </div>
-          <div id="noticeTry">
-            <span>게시판 리스트(위치확인4)</span>
+            <span>게시판 리스트{{noticeitem}}(위치확인)</span>
           </div>
         </div>
       </div>
@@ -83,7 +33,10 @@
 export default {
   name: "mainPage",
   data() {
-    return {}
+    return {
+      noticelist : [1,2,3,4],
+      noticeSwiperlist : [1,2,3,4],
+    }
   },
   components: {},
   methods: {
