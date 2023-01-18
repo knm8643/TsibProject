@@ -1,18 +1,34 @@
 <template>
   <div id="mainBody">
     <div class="noticeSwiperBox">
-      <div id="notice_swiper_list" v-for="(swiperitem, index) in noticeSwiperlist" v-bind:key="index" @click="noticeSwiper()">
-        <div>
-          <img src="">
-          <div>스와이퍼 리스트{{swiperitem}}(위치확인)</div>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div id="notice_swiper_list" @click="noticeSwiper()" v-for="(noticeSwiperList_1 ,index) in noticeSwiperList_1" v-bind:key="index">
+              <img :src="noticeSwiperList_1.img" class="carousel-photo" alt="">
+              <p class="carousel-p">안녕하신가<br>반갑네{{noticeSwiperList_1.val}}</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../public/examplePhoto/example7.jpg" class="d-block w-100" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="../../public/examplePhoto/example8.jpg" class="d-block w-100" alt="">
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
     <div class="noticeNavi">
-      <div>
-        <p>
+      <div class="noticeNavi_body">
           <router-link to="/post" id="inputSpan2">새글등록(링크용)</router-link>
-        </p>
       </div>
     </div>
     <div class="noticeList">
@@ -34,8 +50,14 @@ export default {
   name: "mainPage",
   data() {
     return {
-      noticelist : [1,2,3,4],
-      noticeSwiperlist : [1,2,3,4],
+      noticelist : [1,2,3,4,5,6],
+      noticeSwiperList_1 :
+          [
+            {img:require("../../public/examplePhoto/example3.jpg"), val:1},
+            {img:require("../../public/examplePhoto/example4.jpg"), val:2},
+            {img:require("../../public/examplePhoto/example5.png"), val:3},
+            {img:require("../../public/examplePhoto/example6.jpg"), val:4},
+          ]
     }
   },
   components: {},
@@ -53,15 +75,26 @@ export default {
 <style lang="scss" scoped>
 /* 변동 CSS*/
 // 스와이퍼 메인테마 박스
-.noticeSwiperBox{text-align: center; height: 350px;}
-
-// div 박스 사이즈 조정
-#notice{height: 300px; width: 290px;}
-#notice_swiper_list{height: 300px; width: 200px;}
+.noticeSwiperBox, .carousel-item{text-align: center; height: 350px; width: 800px;}
+.carousel-photo{width: 200px; height: 350px; z-index: 1; object-fit: cover;}
+.carousel-p{width: 200px; height: 100px; position: relative; top:-120px; z-index: 2; color: white;}
+.carousel-item{margin: auto;}
+#notice_swiper_list{display: inline-block; vertical-align: middle;}
+// 중앙메인 네비
+.noticeNavi{height: 65px;}
+.noticeNavi_body{margin-top: 30px;}
 
 /* 고정 CSS */
+// 스와이퍼 부트스트랩
+.carousel-inner{height: 350px;}
+// 배경색상
+#mainBody{background-color: #EBEBEB;}
+// 메인테마 사이즈고정
+.noticeSwiperBox, .noticeNavi, .noticeList{width: 800px; margin: auto;}
 // 메인테마 구분선 추가
-#notice_swiper_list, #notice {
+#notice {
+  height: 350px;
+  width: 400px;
   border: 1px solid black;
   margin: auto;
   display: inline-block; // div안에 div중앙정렬 1
