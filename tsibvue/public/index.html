@@ -8,8 +8,12 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <!--영역 구분을 위한 임시 CSS-->
-    <div id="navi" style="border: 1px solid; height: 100px; text-align: center"></div>
+    <div id="navi" style="border: 1px solid;"></div>
     <div id="app" style="border: 1px solid;"></div>
   </body>
+  <style>
+      /*영역 구분 임시 (수정할사람 하셔도 상관없습니다~)*/
+      #navi{height: 150px; text-align: center; border: 1px solid;}
+      #app{border: 1px solid;}
+  </style>
 </html>

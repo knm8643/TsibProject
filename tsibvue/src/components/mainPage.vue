@@ -1,19 +1,19 @@
 <template>
   <div id="mainBody">
     <div class="noticeSwiperBox">
-      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" data-bs-interval="6000">
             <div id="notice_swiper_list" @click="noticeSwiper()" v-for="(noticeSwiperList_1 ,index) in noticeSwiperList_1" v-bind:key="index">
               <img :src="noticeSwiperList_1.img" class="carousel-photo" alt="">
-              <p class="carousel-p">안녕하신가<br>반갑네{{noticeSwiperList_1.val}}</p>
+              <p class="carousel-p">안녕하신가<br>반갑네 리스트출력예정{{noticeSwiperList_1.val}}</p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="../../public/examplePhoto/example7.jpg" class="d-block w-100" alt="">
-          </div>
-          <div class="carousel-item">
-            <img src="../../public/examplePhoto/example8.jpg" class="d-block w-100" alt="">
+          <div class="carousel-item" data-bs-interval="6000">
+            <div id="notice_swiper_list" @click="noticeSwiper()" v-for="(noticeSwiperList_2 ,index) in noticeSwiperList_2" v-bind:key="index">
+              <img :src="noticeSwiperList_2.img" class="carousel-photo" alt="">
+              <p class="carousel-p">안녕하신가<br>반갑네{{noticeSwiperList_2.val}}</p>
+            </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -28,17 +28,29 @@
     </div>
     <div class="noticeNavi">
       <div class="noticeNavi_body">
-          <router-link to="/post" id="inputSpan2">새글등록(링크용)</router-link>
+        <div id="noticeNaveButton">
+          <!-- 미완성 -->
+          <router-link to="/post" id="inputSpan2">
+            <button>목록형</button>
+            <button>+</button>
+            <button>ㅁ</button>
+            <button>ㅇ</button>
+          </router-link>
+        </div>
       </div>
     </div>
     <div class="noticeList">
       <div id="notice" v-for="(noticeitem, index) in noticelist" v-bind:key="index" @click="noticePage()">
         <div>
-          <div id="notice_img">
-            <img src="">
+          <div id="noticeBox_img">
+            <img id="notice_img" src="../../public/examplePhoto/example9.jpeg">
           </div>
           <div id="noticeTry">
-            <span>게시판 리스트{{noticeitem}}(위치확인)</span>
+            <h5>
+              <!--일단사이즈 각 보는용 -->
+              &nbsp;<br>
+              게시판 리스트{{noticeitem}}<br>(데이터 출력예정)
+            </h5>
           </div>
         </div>
       </div>
@@ -57,6 +69,13 @@ export default {
             {img:require("../../public/examplePhoto/example4.jpg"), val:2},
             {img:require("../../public/examplePhoto/example5.png"), val:3},
             {img:require("../../public/examplePhoto/example6.jpg"), val:4},
+          ],
+      noticeSwiperList_2 :
+          [
+            {img:require("../../public/examplePhoto/example1.jpg"), val:1},
+            {img:require("../../public/examplePhoto/example2.jpg"), val:2},
+            {img:require("../../public/examplePhoto/example7.jpg"), val:3},
+            {img:require("../../public/examplePhoto/example8.jpg"), val:4},
           ]
     }
   },
@@ -74,6 +93,11 @@ export default {
 
 <style lang="scss" scoped>
 /* 변동 CSS*/
+// 게시판 출력
+#noticeNaveButton{margin-left: 650px;}
+#noticeTry{height: 100px; background-color: snow; border: 1px solid black;}
+#noticeBox_img{height: 250px; width: 400px; border: 1px solid black;}
+#notice_img{height: 250px;width: 400px; object-fit: cover;}
 // 스와이퍼 메인테마 박스
 .noticeSwiperBox, .carousel-item{text-align: center; height: 350px; width: 800px;}
 .carousel-photo{width: 200px; height: 350px; z-index: 1; object-fit: cover;}
@@ -93,9 +117,8 @@ export default {
 .noticeSwiperBox, .noticeNavi, .noticeList{width: 800px; margin: auto;}
 // 메인테마 구분선 추가
 #notice {
-  height: 350px;
+  height: 380px; // 공간여백 생성
   width: 400px;
-  border: 1px solid black;
   margin: auto;
   display: inline-block; // div안에 div중앙정렬 1
   vertical-align: middle; // div안에 div중앙정렬 2
