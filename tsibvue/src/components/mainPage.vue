@@ -41,15 +41,14 @@
     </div>
     <div class="noticeList">
       <div id="notice" v-for="(noticeitem, index) in noticelist" v-bind:key="index" @click="noticePage()">
-        <div>
+        <div id="noticeBox">
           <div id="noticeBox_img">
             <img id="notice_img" src="../../public/examplePhoto/example9.jpeg">
           </div>
           <div id="noticeTry">
             <h5>
-              <!--일단사이즈 각 보는용 -->
-              &nbsp;<br>
-              게시판 리스트{{noticeitem}}<br>(데이터 출력예정)
+              &nbsp;<br>게시판 리스트{{noticeitem}}<br>
+               #테스트1 #테스트2 #테스트3
             </h5>
           </div>
         </div>
@@ -94,7 +93,10 @@ export default {
 <style lang="scss" scoped>
 /* 변동 CSS*/
 // 게시판 출력
-#noticeNaveButton{margin-left: 650px;}
+#noticeNaveButton{
+  button{background-color: snow;}
+  margin-left: 650px;
+}
 #noticeTry{height: 100px; background-color: snow; border: 1px solid black;}
 #noticeBox_img{height: 250px; width: 400px; border: 1px solid black;}
 #notice_img{height: 250px;width: 400px; object-fit: cover;}

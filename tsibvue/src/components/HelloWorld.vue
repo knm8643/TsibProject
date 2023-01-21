@@ -59,6 +59,8 @@ export default {
         }else{
           console.log("Fail");
         }
+      }).catch(function (){
+        alert("스프링 연결이 되어있지 않습니다! 뷰만 오픈하셨군요!")
       });
     },
     noticeInputOpen(){
