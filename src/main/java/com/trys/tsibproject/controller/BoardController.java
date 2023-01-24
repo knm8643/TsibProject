@@ -35,4 +35,18 @@ public class BoardController {
         System.out.println("-- 메인페이지 진입 성공 --");
         return 01;
     }
+
+    @PostMapping("/create")
+    @ResponseBody
+    public int postTitle(@RequestBody BoardDTO data){
+        String title = data.getTitle();
+        String media = data.getMedia();
+        String tag = data.getTag();
+        String content = data.getContent();
+        System.out.println(title);
+        System.out.println(media);
+        System.out.println(tag);
+        System.out.println(content);
+        return 01;
+    }
 }
