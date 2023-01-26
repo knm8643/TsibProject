@@ -31,7 +31,6 @@ public class BoardController {
     @GetMapping("/selectBoard")
     @ResponseBody
     public int selectBoard(String sendData){
-        // 더미데이터 출력은 다음 작업때! 오늘은 간단히 여기까지만
         System.out.println("-- 메인페이지 진입 성공 --");
         return 01;
     }

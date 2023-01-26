@@ -12,6 +12,7 @@ export default {
     }
   },
   methods:{
+    // 스프링 테스트를 위한 페이지뷰입니다.
     openNoticePage(){
       this.memberName = prompt("디비에 저장할 정보를 입력해주세요.","");
       if(this.memberName != null && this.memberName != ''){

@@ -95,7 +95,7 @@ export default {
 // 게시판 출력
 #noticeNaveButton{
   button{background-color: snow;}
-  margin-left: 650px;
+  margin-left: 620px;
 }
 #noticeTry{height: 100px; background-color: snow; border: 1px solid black;}
 #noticeBox_img{height: 250px; width: 400px; border: 1px solid black;}
