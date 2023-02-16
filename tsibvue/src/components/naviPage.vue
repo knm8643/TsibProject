@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "naviPage",
@@ -26,7 +25,7 @@ export default {
   },
   methods:{
     sendMainPage(sendData){
-      axios({
+      this.$axios({
         url: "/board/selectBoard",
         method: "get",
         params: {deviceType: sendData}
