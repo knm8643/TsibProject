@@ -17,35 +17,13 @@
 </template>
 
 <script>
-
-export default {
-  name: "naviPage",
-  data(){
-    return{}
-  },
-  methods:{
-    sendMainPage(sendData){
-      this.$axios({
-        url: "/board/selectBoard",
-        method: "get",
-        params: {deviceType: sendData}
-      }).then((response) => {
-        if(response.data == '01'){
-          alert("스프링이 연결된 메인페이지입니다!")
-        }
-      }).catch(function (){
-        alert("메인페이지 스프링 연결이 되어있지 않습니다! 더미 데이터 보려면 스프링 연결해야만해요!")
-      });
-    }
-  }
-}
+import naviPage from "@/js/naviPage.js";
+export default naviPage
 </script>
 
 <style lang="scss" scoped>
  /* 임시 CSS */
- span {
-   cursor: pointer;
- }
+ span {cursor: pointer;}
  #navi_title, #navi_main, #navi_intro, #navi_login, #navi_mypage, #navi_post{
    text-decoration: none;
    color: inherit;

@@ -57,37 +57,8 @@
   </div>
 </template>
 <script>
-export default {
-  name: "mainPage",
-  data() {
-    return {
-      noticelist : [1,2,3,4,5,6],
-      noticeSwiperList_1 :
-          [
-            {img:require("../../public/examplePhoto/example3.jpg"), val:1},
-            {img:require("../../public/examplePhoto/example4.jpg"), val:2},
-            {img:require("../../public/examplePhoto/example5.png"), val:3},
-            {img:require("../../public/examplePhoto/example6.jpg"), val:4},
-          ],
-      noticeSwiperList_2 :
-          [
-            {img:require("../../public/examplePhoto/example1.jpg"), val:1},
-            {img:require("../../public/examplePhoto/example2.jpg"), val:2},
-            {img:require("../../public/examplePhoto/example7.jpg"), val:3},
-            {img:require("../../public/examplePhoto/example8.jpg"), val:4},
-          ]
-    }
-  },
-  components: {},
-  methods: {
-    noticeSwiper() {
-      alert("게시판 스와이퍼는 아직입니다!");
-    },
-    noticePage() {
-      alert("게시판 내부는 아직입니다!");
-    },
-  }
-}
+import mainPage from "@/js/mainPage.js";
+export default mainPage
 </script>
 
 <style lang="scss" scoped>
@@ -100,12 +71,14 @@ export default {
 #noticeTry{height: 100px; background-color: snow; border: 1px solid black;}
 #noticeBox_img{height: 250px; width: 400px; border: 1px solid black;}
 #notice_img{height: 250px;width: 400px; object-fit: cover;}
+
 // 스와이퍼 메인테마 박스
 .noticeSwiperBox, .carousel-item{text-align: center; height: 350px; width: 800px;}
 .carousel-photo{width: 200px; height: 350px; z-index: 1; object-fit: cover;}
 .carousel-p{width: 200px; height: 100px; position: relative; top:-120px; z-index: 2; color: white;}
 .carousel-item{margin: auto;}
 #notice_swiper_list{display: inline-block; vertical-align: middle;}
+
 // 중앙메인 네비
 .noticeNavi{height: 65px;}
 .noticeNavi_body{margin-top: 30px;}
@@ -113,10 +86,13 @@ export default {
 /* 고정 CSS */
 // 스와이퍼 부트스트랩
 .carousel-inner{height: 350px;}
+
 // 배경색상
 #mainBody{background-color: #EBEBEB;}
+
 // 메인테마 사이즈고정
 .noticeSwiperBox, .noticeNavi, .noticeList{width: 800px; margin: auto;}
+
 // 메인테마 구분선 추가
 #notice {
   height: 380px; // 공간여백 생성
@@ -125,11 +101,13 @@ export default {
   display: inline-block; // div안에 div중앙정렬 1
   vertical-align: middle; // div안에 div중앙정렬 2
 }
+
 // 링크 밑줄 삭제
 a, router-link {
   text-decoration: none;
   color: inherit;
 }
+
 // 포인트 강조
 #notice, #notice_swiper_list, #inputSpan2 {
   cursor: pointer;

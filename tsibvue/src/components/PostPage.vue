@@ -29,37 +29,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-
-export default {
-  name: "PostPage",
-  components: {},
-  data() {
-    return {
-      title: "",
-      media: "",
-      tag: "",
-      content: "",
-    }
-  },
-  methods: {
-    createPost() {
-      var url = '/board/create';
-      var data = {
-        title: this.title,
-        media: this.media,
-        tag: this.tag,
-        content: this.content
-      }
-      axios.post(url, data)
-      .then(function (response) {
-        console.log(response.data)
-      }).catch(function (error) {
-        console.log(error)
-      });
-    },
-  }
-}
+import postPage from "@/js/postPage.js";
+export default postPage
 </script>
 
 <style scoped>
