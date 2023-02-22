@@ -1,0 +1,50 @@
+/* 변동 CSS*/
+// 게시판 출력
+#noticeNaveButton{
+  button{background-color: snow;}
+  margin-left: 620px;
+}
+#noticeTry{height: 100px; background-color: snow; border: 1px solid black;}
+#noticeBox_img{height: 250px; width: 400px; border: 1px solid black;}
+#notice_img{height: 250px;width: 400px; object-fit: cover;}
+
+// 스와이퍼 메인테마 박스
+.noticeSwiperBox, .carousel-item{text-align: center; height: 350px; width: 800px;}
+.carousel-photo{width: 200px; height: 350px; z-index: 1; object-fit: cover;}
+.carousel-p{width: 200px; height: 100px; position: relative; top:-120px; z-index: 2; color: white;}
+.carousel-item{margin: auto;}
+#notice_swiper_list{display: inline-block; vertical-align: middle;}
+
+// 중앙메인 네비
+.noticeNavi{height: 65px;}
+.noticeNavi_body{margin-top: 30px;}
+
+/* 고정 CSS */
+// 스와이퍼 부트스트랩
+.carousel-inner{height: 350px;}
+
+// 배경색상
+#mainBody{background-color: #EBEBEB;}
+
+// 메인테마 사이즈고정
+.noticeSwiperBox, .noticeNavi, .noticeList{width: 800px; margin: auto;}
+
+// 메인테마 구분선 추가
+#notice {
+  height: 380px; // 공간여백 생성
+  width: 400px;
+  margin: auto;
+  display: inline-block; // div안에 div중앙정렬 1
+  vertical-align: middle; // div안에 div중앙정렬 2
+}
+
+// 링크 밑줄 삭제
+a, router-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+// 포인트 강조
+#notice, #notice_swiper_list, #inputSpan2 {
+  cursor: pointer;
+}

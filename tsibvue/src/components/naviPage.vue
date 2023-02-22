@@ -21,16 +21,5 @@ import naviPage from "@/js/naviPage.js";
 export default naviPage
 </script>
 
-<style lang="scss" scoped>
- /* 임시 CSS */
- span {cursor: pointer;}
- #navi_title, #navi_main, #navi_intro, #navi_login, #navi_mypage, #navi_post{
-   text-decoration: none;
-   color: inherit;
- }
- header{
-   #navi_title{
-     color: red;
-   }
- }
+<style lang="scss" src="@/assets/naviPage.scss">
 </style>
