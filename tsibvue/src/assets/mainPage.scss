@@ -1,50 +1,159 @@
 /* 변동 CSS*/
 // 게시판 출력
-#noticeNaveButton{
-  button{background-color: snow;}
+#noticeBox {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#notice {
+  color: #333;
+}
+
+#noticeNaveButton {
+  button { background-color: snow; }
   margin-left: 620px;
 }
-#noticeTry{height: 100px; background-color: snow; border: 1px solid black;}
-#noticeBox_img{height: 250px; width: 400px; border: 1px solid black;}
-#notice_img{height: 250px;width: 400px; object-fit: cover;}
+
+#noticeBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#noticeTry { height: 100px; background-color: snow; border: 1px solid black; }
+#noticeBox_img { height: 250px; width: 381px; border: 1px solid black; }
+#notice_img { height: 250px; width: 381px; object-fit: cover; }
 
 // 스와이퍼 메인테마 박스
-.noticeSwiperBox, .carousel-item{text-align: center; height: 350px; width: 800px;}
-.carousel-photo{width: 200px; height: 350px; z-index: 1; object-fit: cover;}
-.carousel-p{width: 200px; height: 100px; position: relative; top:-120px; z-index: 2; color: white;}
-.carousel-item{margin: auto;}
-#notice_swiper_list{display: inline-block; vertical-align: middle;}
+.noticeSwiperBox, .carousel-item {
+  text-align: center;
+  height: 350px;
+  width: 800px;
+  margin: auto;
+}
+
+.carousel-photo {
+  width: 200px;
+  height: 350px;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.carousel-p {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  top: -120px;
+  z-index: 2;
+  color: white;
+}
+
+.carousel-item {
+  margin: auto;
+}
+
+#notice_swiper_list {
+  display: inline-block;
+  vertical-align: middle;
+}
 
 // 중앙메인 네비
-.noticeNavi{height: 65px;}
-.noticeNavi_body{margin-top: 30px;}
+.noticeNavi {
+  height: 65px;
+  width: 800px;
+  margin: auto;
+  margin-top: 30px;
+}
 
 /* 고정 CSS */
 // 스와이퍼 부트스트랩
-.carousel-inner{height: 350px;}
+.carousel-inner {
+  height: 350px;
+}
 
 // 배경색상
-#mainBody{background-color: #EBEBEB;}
+#mainBody {
+  //background-color: #EBEBEB;
+}
 
-// 메인테마 사이즈고정
-.noticeSwiperBox, .noticeNavi, .noticeList{width: 800px; margin: auto;}
+body {
+  background-color: #f1f1f1;
+}
+
+/* 그림자 효과 */
+.box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* 회전 효과 */
+.box {
+  transform: rotate(20deg);
+}
+
+/* 이동 효과 */
+.box {
+  position: relative;
+  top: 20px;
+}
+
+/* 크기 조정 효과 */
+.box {
+  width: 200px;
+  height: 200px;
+  transition: width 2s, height 2s;
+}
+
+.box:hover {
+  width: 400px;
+  height: 400px;
+}
+
+/* 투명도 조정 효과 */
+.box {
+  opacity: 0.5;
+}
+
+// 포인트 강조
+#notice,
+#notice_swiper_list,
+#inputSpan2,
+#noticeNaveButton {
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+}
+
+// 링크 밑줄 삭제
+a,
+router-link {
+  text-decoration: none;
+  color: inherit;
+}
 
 // 메인테마 구분선 추가
 #notice {
   height: 380px; // 공간여백 생성
   width: 400px;
-  margin: auto;
   display: inline-block; // div안에 div중앙정렬 1
   vertical-align: middle; // div안에 div중앙정렬 2
+  margin: auto;
 }
 
-// 링크 밑줄 삭제
-a, router-link {
-  text-decoration: none;
-  color: inherit;
+// 메인테마 사이즈고정
+.noticeSwiperBox,
+.noticeNavi,
+.noticeList {
+  width: 800px;
+  margin: auto;
 }
 
-// 포인트 강조
-#notice, #notice_swiper_list, #inputSpan2 {
-  cursor: pointer;
+.noticeList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.noticeList > div {
+  flex: 0 0 calc(33.33% - 10px);
+  margin: 0;
+  padding: 0 5px;
+  box-sizing: border-box;
 }
