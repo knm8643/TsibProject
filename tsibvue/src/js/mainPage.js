@@ -2,7 +2,20 @@ export default {
     name: "mainPage",
     data() {
         return {
-            noticelist : [1,2,3,4,5,6],
+            noticelist : [1,2,3,4,5,6,7,8,9,10,11],
+            noticeimages:[
+                'example1.jpg',
+                'example2.jpg',
+                'example3.jpg',
+                'example4.jpg',
+                'example5.png',
+                'example6.jpg',
+                'example7.jpg',
+                'example8.jpg',
+                'example9.jpeg',
+                'example10.jpg',
+                'example10.jpg',
+            ],
             noticeSwiperList_1 :
                 [
                     {img:require("../../public/examplePhoto/example3.jpg"), val:1},

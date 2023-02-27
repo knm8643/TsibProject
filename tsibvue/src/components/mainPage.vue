@@ -43,7 +43,7 @@
       <div id="notice" v-for="(noticeitem, index) in noticelist" v-bind:key="index" @click="noticePage()">
         <div id="noticeBox">
           <div id="noticeBox_img">
-            <img id="notice_img" src="../../public/examplePhoto/example9.jpeg">
+            <img id="notice_img" v-bind:src="require(`../../public/examplePhoto/${noticeimages[index]}`)">
           </div>
           <div id="noticeTry">
             <h5>

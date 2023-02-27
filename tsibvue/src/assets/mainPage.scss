@@ -20,7 +20,7 @@
 
 #noticeTry { height: 100px; background-color: snow; border: 1px solid black; }
 #noticeBox_img { height: 250px; width: 381px; border: 1px solid black; }
-#notice_img { height: 250px; width: 381px; object-fit: cover; }
+#notice_img { height: 249px; width: 381px; object-fit: cover; }
 
 // 스와이퍼 메인테마 박스
 .noticeSwiperBox, .carousel-item {
@@ -75,7 +75,7 @@
 }
 
 body {
-  background-color: #f1f1f1;
+  background: #fafafa;
 }
 
 /* 그림자 효과 */
