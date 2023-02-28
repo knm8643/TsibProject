@@ -10,11 +10,13 @@ export default {
                 method: "get",
                 params: {deviceType: sendData}
             }).then((response) => {
-                if(response.data == '01'){
+                if (response.data == '01') {
                     alert("스프링이 연결된 메인페이지입니다!")
                 }
-            }).catch(function (){
-                alert("메인페이지 스프링 연결이 되어있지 않습니다! 더미 데이터 보려면 스프링 연결해야만해요!")
+            }).catch(function (error) {
+                if (error.response) {
+                    alert("메인페이지 스프링 연결이 되어있지 않습니다! 더미 데이터 보려면 스프링 연결해야만해요!")
+                }
             });
         }
     }
