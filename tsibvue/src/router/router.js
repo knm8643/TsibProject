@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import customer from "@/router/customer.js";
 
 const routes = [
     {
@@ -32,6 +33,8 @@ const routes = [
         component: () => import(/* webpackChunkName: "/post" */ '@/components/PostPage.vue')
     },
 ]
+
+routes.push(customer)
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
