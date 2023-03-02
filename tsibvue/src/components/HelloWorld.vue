@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import HelloWorld from "@/js/HelloWorld.js";
+import HelloWorld from "@/js/helloWorld.js";
 export default HelloWorld
 </script>
 

@@ -10,7 +10,7 @@ const routes = [
     {
         path: '/main',
         name: 'main',
-        component: () => import(/* webpackChunkName: "/main" */ '@/components/mainPage.vue')
+        component: () => import(/* webpackChunkName: "/main" */ '@/components/MainPage.vue')
     },
     {
         path: '/credit',

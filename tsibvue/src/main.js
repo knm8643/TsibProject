@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import Navi from "@/components/naviPage";
+import Navi from "@/components/NaviPage";
 import router from "@/router/router";
 import globals from './global'
 

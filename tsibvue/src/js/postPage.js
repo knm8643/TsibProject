@@ -17,6 +17,7 @@ export default {
             }
         },
 
+
         // 저장 버튼
         savePost: function (event) {
             if (event) {

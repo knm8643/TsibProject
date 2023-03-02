@@ -1,4 +1,4 @@
-import inputNotice from '@/components/inputNotice';
+import inputNotice from '@/components/InputNotice';
 export default {
     name: 'HelloWorld',
     props: {
