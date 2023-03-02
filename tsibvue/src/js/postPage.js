@@ -13,7 +13,7 @@ export default {
         // 나가기 버튼
         goBack: function (event) {
             if (event) {
-                window.history.back();
+                this.$router.push('/main')
             }
         },
 
