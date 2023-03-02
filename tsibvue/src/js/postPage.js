@@ -37,7 +37,7 @@ export default {
 
                 // AXIOS
                 this.$axios({
-                    url: "/board/save",
+                    url: "/board/post",
                     method: "post",
                     params: postData
                 })
@@ -81,7 +81,7 @@ export default {
 
                 // AXIOS
                 this.$axios({
-                    url: "/board/tmpsave",
+                    url: "/board/post/tmp",
                     method: "post",
                     params: postData
                 })

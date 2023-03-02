@@ -6,6 +6,7 @@ import com.trys.tsibproject.mapper.springTestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+
 @Service
 public class BoardService {
 
@@ -14,5 +15,10 @@ public class BoardService {
 
     public int boardInsert(String userName){
         return boardDAO.boardInsert(userName);
+    }
+
+    // PostPage (test)
+    public int savePost(String title, String media, String tag, String content){
+        return boardDAO.savePost(title, media, tag, content);
     }
 }

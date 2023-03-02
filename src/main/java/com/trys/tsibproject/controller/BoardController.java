@@ -35,17 +35,21 @@ public class BoardController {
         return 01;
     }
 
-    @PostMapping("/create")
+    @PostMapping("/post")
     @ResponseBody
-    public int postTitle(@RequestBody BoardDTO data){
-        String title = data.getTitle();
-        String media = data.getMedia();
-        String tag = data.getTag();
-        String content = data.getContent();
+    public int postTitle(@RequestBody BoardDTO post){
+        String title = post.getTitle();
+        String media = post.getMedia();
+        String tag = post.getTag();
+        String content = post.getContent();
+
         System.out.println(title);
         System.out.println(media);
         System.out.println(tag);
         System.out.println(content);
+
+        boardService.savePost(title, media, tag, content);
+
         return 01;
     }
 }
