@@ -9,7 +9,7 @@
     </div>
     <div class="col" style="background-color:whitesmoke; padding:0">
       <p style="margin: 2% 0 2% 0;">(임시) 글쓰기 구역</p>
-      <form v-on:submit="createPost" style="margin: 0 10% 0 10%">
+      <form style="margin: 0 10% 0 10%">
         <div class="form-floating mb-3">
           <input type="text" class="form-control" placeholder="" v-model="title">
           <label>제목</label>
@@ -27,8 +27,8 @@
           <label>내용</label>
         </div>
         <button type="button" v-on:click="goBack" class="btn btn-outline-primary" id="goBackButton">나가기</button>
-        <button type="button" v-on:click="savePost" class="btn btn-outline-primary" id="saveButton">저장하기</button>
         <button type="button" v-on:click="savePostTmp" class="btn btn-outline-secondary" id="tmpSaveButton">임시저장하기</button>
+        <button type="button" v-on:click="savePost" class="btn btn-outline-primary" id="saveButton">저장하기</button>
       </form>
     </div>
   </div>
@@ -39,19 +39,5 @@ import postPage from "@/js/postPage.js";
 export default postPage
 </script>
 
-<style scoped>
-.form-control {
-  width: 100%;
-  margin: 0;
-}
-#goBackButton {
-  float:left;
-  margin: 1% 0 3% 1%;
-}
-#saveButton {
-  float:right; margin: 1% 3% 3% 0;
-}
-#tmpSaveButton {
-  float:right; margin: 1% 1% 3% 0;
-}
+<style scoped lang="scss" src="@/assets/postPage.scss">
 </style>
