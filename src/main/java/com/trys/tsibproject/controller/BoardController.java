@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+// PostPage Controller
 @Controller
 @RequestMapping("/board")
 public class BoardController {
@@ -35,22 +36,57 @@ public class BoardController {
         return 01;
     }
 
-    @PostMapping("/save")
-    @ResponseBody
-    public int postTitle(String title, String media, String tag, String content){
-//    public int postTitle(@RequestBody BoardDTO post){
-//        String title = post.getTitle();
-//        String media = post.getMedia();
-//        String tag = post.getTag();
-//        String content = post.getContent();
+    // Save
+    @PostMapping
+    public String savePost(String title, String media, String tag, String content){
+        BoardDTO boardDTO = new BoardDTO();
 
-        System.out.println(title);
-        System.out.println(media);
-        System.out.println(tag);
-        System.out.println(content);
+        boardDTO.setTitle(title);
+        boardDTO.setMedia(media);
+        boardDTO.setTag(tag);
+        boardDTO.setContent(content);
+
+        String title_test = boardDTO.getTitle();
+        String media_test = boardDTO.getMedia();
+        String tag_test = boardDTO.getTag();
+        String content_test = boardDTO.getContent();
+
+        System.out.println(title_test);
+        System.out.println(media_test);
+        System.out.println(tag_test);
+        System.out.println(content_test);
+
+        String test = "save test";
 
 //        boardService.savePost(title, media, tag, content);
 
-        return 01;
+        return test;
+    }
+
+    // SaveTmp
+    @PostMapping("/tmp")
+    public String savePostTmp(String title, String media, String tag, String content){
+        BoardDTO boardDTO = new BoardDTO();
+
+        boardDTO.setTitleTmp(title);
+        boardDTO.setMediaTmp(media);
+        boardDTO.setTagTmp(tag);
+        boardDTO.setContentTmp(content);
+
+        String titleTmp = boardDTO.getTitleTmp();
+        String mediaTmp = boardDTO.getMediaTmp();
+        String tagTmp = boardDTO.getTagTmp();
+        String contentTmp = boardDTO.getContentTmp();
+
+        System.out.println(titleTmp);
+        System.out.println(mediaTmp);
+        System.out.println(tagTmp);
+        System.out.println(contentTmp);
+
+        String test = "tmp save test";
+
+//        boardService.savePost(title, media, tag, content);
+
+        return test;
     }
 }
