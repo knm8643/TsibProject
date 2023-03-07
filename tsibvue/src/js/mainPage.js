@@ -33,7 +33,20 @@ export default {
         }
     },
     components: {},
+    mounted() {
+        this.mainInit()
+    },
     methods: {
+        mainInit() {
+            /* 더미데이터(영찬이 작업시 삭제 예정) */
+            this.$axios({
+                url : ""
+            }).then(function (response){ // eslint-disable-line no-unused-vars
+                console.log('페이지 최초 접속시 작동')
+            }).catch(function (error) {
+                console.log(error)
+            })
+        },
         noticeSwiper() {
             alert("게시판 스와이퍼는 아직입니다!");
         },

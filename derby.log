@@ -1,16 +1,16 @@
 ----------------------------------------------------------------
-Thu Dec 08 19:21:07 KST 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0184-f140-d01a-0000023c69c0 
-on database directory memory:/Users/ichungjae/git/tsibproject/tsibproject/338b5e3f-74d3-4771-8ded-c2b3b19ca663 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7 
+Tue Mar 07 20:24:23 KST 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0186-bbd0-b6ea-0000033dacb0 
+on database directory memory:/Users/ichungjae/git/tsibproject_fasle/2aed6013-e4a8-48a5-8974-6501ad609698 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7 
 Loaded from file:/Users/ichungjae/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=18.0.1.1+2-6
-user.dir=/Users/ichungjae/git/tsibproject/tsibproject
+user.dir=/Users/ichungjae/git/tsibproject_fasle
 os.name=Mac OS X
 os.arch=aarch64
 os.version=13.0.1
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Thu Dec 08 19:21:08 KST 2022:
-Shutting down instance a816c00e-0184-f140-d01a-0000023c69c0 on database directory memory:/Users/ichungjae/git/tsibproject/tsibproject/338b5e3f-74d3-4771-8ded-c2b3b19ca663 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7 
+Tue Mar 07 20:24:24 KST 2023:
+Shutting down instance a816c00e-0186-bbd0-b6ea-0000033dacb0 on database directory memory:/Users/ichungjae/git/tsibproject_fasle/2aed6013-e4a8-48a5-8974-6501ad609698 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7 
