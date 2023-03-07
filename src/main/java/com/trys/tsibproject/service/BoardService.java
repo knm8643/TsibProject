@@ -14,11 +14,17 @@ public class BoardService {
     private BoardDAO boardDAO;
 
     public int boardInsert(String userName){
-        return boardDAO.boardInsert(userName);
+//        return boardDAO.boardInsert(userName);
+        return 01; // (임시)
     }
 
-//    // PostPage
-//    public int savePost(String title, String media, String tag, String content){
-//        return boardDAO.savePost(title, media, tag, content);
-//    }
+    // PostPage save
+    public int savePost(String title, String media, String tag, String content){
+        return boardDAO.savePost(title, media, tag, content);
+    }
+
+    // PostPage saveTmp
+    public int savePostTmp(String title, String media, String tag, String content){
+        return boardDAO.savePostTmp(title, media, tag, content);
+    }
 }

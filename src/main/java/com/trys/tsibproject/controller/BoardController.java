@@ -51,14 +51,17 @@ public class BoardController {
         String tag_test = boardDTO.getTag();
         String content_test = boardDTO.getContent();
 
-        System.out.println(title_test);
-        System.out.println(media_test);
-        System.out.println(tag_test);
-        System.out.println(content_test);
+        if (boardService.savePost(title_test, media_test, tag_test, content_test) == 01) {
+            System.out.println("[저장] BoardController, BoardService, BoardDTO, BoardDAO 테스트 완료");
+            System.out.println(title_test);
+            System.out.println(media_test);
+            System.out.println(tag_test);
+            System.out.println(content_test);
+        } else {
+            System.out.println("[임시저장] BoardService, BoardDAO 실패");
+        }
 
-        String test = "save test";
-
-//        boardService.savePost(title, media, tag, content);
+        String test = "저장 임시값"; // (임시)
 
         return test;
     }
@@ -78,14 +81,18 @@ public class BoardController {
         String tagTmp = boardDTO.getTagTmp();
         String contentTmp = boardDTO.getContentTmp();
 
-        System.out.println(titleTmp);
-        System.out.println(mediaTmp);
-        System.out.println(tagTmp);
-        System.out.println(contentTmp);
+        if (boardService.savePostTmp(titleTmp, mediaTmp, tagTmp, contentTmp) == 01) {
+            System.out.println("[임시저장] BoardController, BoardService, BoardDTO, BoardDAO 테스트 완료");
+            System.out.println(titleTmp);
+            System.out.println(mediaTmp);
+            System.out.println(tagTmp);
+            System.out.println(contentTmp);
+        } else {
+            System.out.println("[임시저장] BoardService, BoardDAO 실패");
 
-        String test = "tmp save test";
+        }
 
-//        boardService.savePost(title, media, tag, content);
+        String test = "임시저장 리턴값 "; // (임시)
 
         return test;
     }
