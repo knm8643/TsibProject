@@ -6,10 +6,10 @@
         insert into TsibProject.test (mem_name) values (#{userName});
     </insert>
 
-    <!-- PostPage (test) -->
-    <insert id="postSaveMapper">
-        insert into TsibProject.test (post_title, post_media, post_tag, post_content) values (#{postTitle}, #{postMedia}, #{postTag}, #{postContent});
-    </insert>
+    <!-- PostPage -->
+<!--    <insert id="postSaveMapper">-->
+<!--        insert into TsibProject.test (post_title, post_media, post_tag, post_content) values (#{postTitle}, #{postMedia}, #{postTag}, #{postContent});-->
+<!--    </insert>-->
 </mapper>
 
 

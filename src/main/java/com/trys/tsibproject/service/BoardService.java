@@ -17,8 +17,8 @@ public class BoardService {
         return boardDAO.boardInsert(userName);
     }
 
-    // PostPage (test)
-    public int savePost(String title, String media, String tag, String content){
-        return boardDAO.savePost(title, media, tag, content);
-    }
+//    // PostPage
+//    public int savePost(String title, String media, String tag, String content){
+//        return boardDAO.savePost(title, media, tag, content);
+//    }
 }

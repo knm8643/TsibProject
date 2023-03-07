@@ -9,7 +9,9 @@ import java.util.List;
 
 public interface springTestMapper {
     public int insertTestMapper(String userName);
-
-    // PostPage (test)
-    public int postSaveMapper(String title, String media, String tag, String content);
 }
+
+// postPage
+//public interface postSaveMapper {
+//    public int postSaveMapper(String title, String media, String tag, String content);
+//}

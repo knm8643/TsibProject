@@ -14,8 +14,8 @@ public class BoardDAO {
         return testmapper.insertTestMapper(userName);
     }
 
-    // PostPage (test)
-    public int savePost(String title, String media, String tag, String content){
-        return testmapper.postSaveMapper(title, media, tag, content);
-    }
+//    // PostPage
+//    public int savePost(String title, String media, String tag, String content){
+//        return testmapper.postSaveMapper(title, media, tag, content);
+//    }
 }
