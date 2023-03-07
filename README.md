@@ -3,7 +3,7 @@
 
 ```
 # 사용언어
-- Java, JavaScript, MySql, Vue3Js, SpringBoot
+- Java, JavaScript, MySql, Vue3Js, SpringBoot, test
 ```
 
 ```
