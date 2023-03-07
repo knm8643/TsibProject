@@ -35,7 +35,7 @@ public class BoardController {
         return 01;
     }
 
-    @PostMapping("/post")
+    @PostMapping("/save")
     @ResponseBody
     public int postTitle(String title, String media, String tag, String content){
 //    public int postTitle(@RequestBody BoardDTO post){

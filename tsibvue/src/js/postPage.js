@@ -9,6 +9,18 @@ export default {
             content: ""
         }
     },
+    watch: {
+        '$route' (params) {
+            console.log(params)
+        }
+    },
+    beforeRouteLeave(to, from, next) {
+        if (!confirm('게시물이 저장되지 않았습니다. 나가시겠습니까?')) {
+            next(false);
+        } else {
+            next();
+        }
+    },
     methods: {
         // 나가기 버튼
         goBack: function (event) {
@@ -16,8 +28,6 @@ export default {
                 this.$router.push('/main')
             }
         },
-
-
         // 저장 버튼
         savePost: function (event) {
             if (event) {
@@ -37,7 +47,7 @@ export default {
 
                 // AXIOS
                 this.$axios({
-                    url: "/board/post",
+                    url: "/board/save",
                     method: "post",
                     params: postData
                 })
@@ -61,49 +71,9 @@ export default {
                     });
             }
         },
-
         // 임시저장 버튼
         savePostTmp: function (event) {
-            if (event) {
-                // 게시물 데이터
-                let postData = {
-                    title: this.title,
-                    media: this.media,
-                    tag: this.tag,
-                    content: this.content
-                }
-
-                // (임시)
-                let msg = "title: " + this.title + "\n" +
-                    "media: " + this.media + "\n" +
-                    "tag: " + this.tag + "\n" +
-                    "content: " + this.content + "\n";
-
-                // AXIOS
-                this.$axios({
-                    url: "/board/post/tmp",
-                    method: "post",
-                    params: postData
-                })
-                    // 성공
-                    .then(function (response) {
-                        alert("[ 임시저장하기 ]\n" +
-                            "* 데이터\n" + msg + "\n" +
-                            "* 메시지\n" + "임시저장에 성공했습니다." + "\n\n" +
-                            "* 응답 메시지\n" + response.data
-                        );
-                    })
-                    // 실패
-                    .catch(function (error) {
-                        if (error.response) {
-                            alert("[ 임시저장하기 ]\n" +
-                                "* 데이터\n" + msg + "\n" +
-                                "* 메시지\n" + "임시저장에 실패하였습니다." + "\n\n" +
-                                "* axios 에러 메시지\n" + error
-                            );
-                        }
-                    });
-            }
-        }
+            console.log(event?event:"no event");
+        },
     }
 }
