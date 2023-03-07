@@ -7,15 +7,25 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class BoardDAO {
 
-    @Autowired
-    private springTestMapper testmapper;
+//    @Autowired
+//    private springTestMapper testmapper;
 
-    public int boardInsert(String userName){
-        return testmapper.insertTestMapper(userName);
+//    @Autowired
+//    private springTestMapper postSaveMapper;
+
+//    public int boardInsert(String userName){
+//        return testmapper.insertTestMapper(userName);
+//    }
+
+    // PostPage save
+    public int savePost(String title, String media, String tag, String content){
+//        return testmapper.postSaveMapper(title, media, tag, content);
+        return 01;
     }
 
-//    // PostPage
-//    public int savePost(String title, String media, String tag, String content){
+    // PostPage saveTmp
+    public int savePostTmp(String title, String media, String tag, String content){
 //        return testmapper.postSaveMapper(title, media, tag, content);
-//    }
+        return 01;
+    }
 }
