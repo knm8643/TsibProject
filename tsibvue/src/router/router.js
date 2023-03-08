@@ -3,12 +3,12 @@ import customer from "@/router/customer.js";
 
 const routes = [
     {
-        path: '/',
+        path: '/about',
         name: 'home',
         component: () => import(/* webpackChunkName: "/home" */ '@/components/HelloWorld.vue')
     },
     {
-        path: '/main',
+        path: '/',
         name: 'main',
         component: () => import(/* webpackChunkName: "/main" */ '@/components/MainPage.vue')
     },

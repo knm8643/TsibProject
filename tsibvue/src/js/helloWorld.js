@@ -1,4 +1,4 @@
-import inputNotice from '@/components/InputNotice';
+import inputNotice from '@/components/InputNotice.vue';
 export default {
     name: 'HelloWorld',
     props: {

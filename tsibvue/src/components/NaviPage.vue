@@ -6,7 +6,7 @@
       </h3>
       <div class="header_list">
         <ul class="navi_list">
-          <span><router-link id="navi_main" to="/main" @click="sendMainPage('main')">메인</router-link></span> &nbsp;
+          <span><router-link id="navi_main" to="/" @click="sendMainPage('main')">메인</router-link></span> &nbsp;
           <span><router-link id="navi_intro" to="/credit">만든이</router-link></span> &nbsp;
           <span><router-link id="navi_login" to="/login">로그인</router-link></span> &nbsp;
           <span><router-link id="navi_mypage" to="/mypage">마이페이지</router-link></span> &nbsp;
