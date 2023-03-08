@@ -37,7 +37,7 @@ export default {
     // 나가기 버튼
         goBack: function (event) {
             if (event) {
-                this.$router.push('/main');
+                this.$router.push('/');
             }
         },
     // 저장 버튼
