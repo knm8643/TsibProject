@@ -25,20 +25,24 @@ export default creaditPage;
 
 <style scoped>
 .image-container {
+  width: 1440px;
+  height: 960px;
+  margin: 0 auto;
   position: relative;
-  filter: blur(2px);
+  /* filter: blur(2px); */
   opacity: 0.8;
   z-index: 1; /* 이미지를 최상위로 설정 */
 }
 
-.image-container::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.image-container::after {
+position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* 빈 값으로 넣어야 가상의 요소 생성; */
+    content: '';
+    border: 1px solid rgba(0, 0, 0, 0.05);
   background-color: rgba(0, 0, 0, 0.5); /* 검은색 반투명 배경 레이어 */
 }
 
@@ -74,6 +78,6 @@ export default creaditPage;
 
 .intro-section {
   position: relative; /* 요소를 상대 위치로 설정 */
-  background-color: #ffffff; /* 배경색을 흰색으로 설정 */
+  /* background-color: #ffffff;  */
 }
 </style>
