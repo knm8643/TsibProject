@@ -9,6 +9,9 @@ export default {
             content: ""
         }
     },
+    mounted() {
+        this.hideNavi();
+    },
     watch: {
         '$route'(params) {
             console.log(params);
@@ -18,20 +21,28 @@ export default {
         if (!confirm('게시물이 저장되지 않았습니다. 나가시겠습니까?')) {
             next(false);
         } else {
+            this.showNavi();
             next();
         }
     },
     methods: {
-        // 나가기 버튼
+    // Navi 숨기기
+        hideNavi: function () {
+            document.getElementsByClassName("header-container")[0].style.display = "none";
+        },
+    // Navi 보이기
+        showNavi: function () {
+            document.getElementsByClassName("header-container")[0].style.display = "";
+        },
+    // 나가기 버튼
         goBack: function (event) {
             if (event) {
                 this.$router.push('/main');
             }
         },
-        // 저장 버튼
+    // 저장 버튼
         savePost: function (event) {
             if (event) {
-                // 게시물 데이터
                 let postData = {
                     title: this.title,
                     media: this.media,
@@ -39,7 +50,6 @@ export default {
                     content: this.content
                 }
 
-                // AXIOS
                 this.$axios({
                     url: "/board",
                     method: "post",
@@ -57,7 +67,7 @@ export default {
                 });
             }
         },
-        // 임시저장 버튼
+    // 임시저장 버튼
         savePostTmp: function (event) {
             if (event) {
                 let postData = {
@@ -67,7 +77,6 @@ export default {
                     content: this.content
                 }
 
-                // AXIOS
                 this.$axios({
                     url: "/board/tmp",
                     method: "post",
