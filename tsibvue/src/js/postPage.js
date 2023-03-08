@@ -10,7 +10,7 @@ export default {
         }
     },
     watch: {
-        '$route' (params) {
+        '$route'(params) {
             console.log(params);
         }
     },
@@ -44,16 +44,12 @@ export default {
                     url: "/board",
                     method: "post",
                     params: postData
-                })
-                // 성공
-                .then(function (response) {
+                }).then(function (response) {
                     alert("success");
                     if (response) {
                         console.log(response);
                     }
-                })
-                // 실패
-                .catch(function (error) {
+                }).catch(function (error) {
                     alert("fail");
                     if (error) {
                         console.log(error);
@@ -76,21 +72,17 @@ export default {
                     url: "/board/tmp",
                     method: "post",
                     params: postData
-                })
-                    // 성공
-                    .then(function (response) {
-                        alert("success");
-                        if (response) {
-                            console.log(response);
-                        }
-                    })
-                    // 실패
-                    .catch(function (error) {
-                        alert("fail");
-                        if (error) {
-                            console.log(error);
-                        }
-                    });
+                }).then(function (response) {
+                    alert("success");
+                    if (response) {
+                        console.log(response);
+                    }
+                }).catch(function (error) {
+                    alert("fail");
+                    if (error) {
+                        console.log(error);
+                    }
+                });
             }
         },
     }
