@@ -34,7 +34,7 @@ const routes = [
     },
 ]
 
-routes.push(customer)
+routes.push(customer);
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),

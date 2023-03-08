@@ -11,7 +11,7 @@ export default {
     },
     watch: {
         '$route' (params) {
-            console.log(params)
+            console.log(params);
         }
     },
     beforeRouteLeave(to, from, next) {
@@ -25,7 +25,7 @@ export default {
         // 나가기 버튼
         goBack: function (event) {
             if (event) {
-                this.$router.push('/main')
+                this.$router.push('/main');
             }
         },
         // 저장 버튼

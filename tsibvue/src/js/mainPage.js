@@ -34,7 +34,7 @@ export default {
     },
     components: {},
     mounted() {
-        this.mainInit()
+        this.mainInit();
     },
     methods: {
         mainInit() {
@@ -42,9 +42,9 @@ export default {
             this.$axios({
                 url : ""
             }).then(function (response){ // eslint-disable-line no-unused-vars
-                console.log('페이지 최초 접속시 작동')
+                console.log('페이지 최초 접속시 작동');
             }).catch(function (error) {
-                console.log(error)
+                console.log(error);
             })
         },
         noticeSwiper() {

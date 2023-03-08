@@ -10,7 +10,7 @@ export default {
         openNoticePage(){
             this.memberName = prompt("디비에 저장할 정보를 입력해주세요.","");
             if(this.memberName != null && this.memberName != ''){
-                this.noticeInput()
+                this.noticeInput();
             }else {
                 alert("입력하신 정보가 없습니다.");
             }
@@ -27,7 +27,7 @@ export default {
                     alert('입력된 값이 없습니다. 테스트 테이블은 설정하셨나요?');
                 }
             }).catch(function (){
-                alert("스프링 연결이 되어있지 않습니다! 뷰만 오픈하셨군요!")
+                alert("스프링 연결이 되어있지 않습니다! 뷰만 오픈하셨군요!");
             });
         }
     }

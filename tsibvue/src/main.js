@@ -7,8 +7,8 @@ import globals from './global'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 
-const app = createApp(App)
-const navi = createApp(Navi)
+const app = createApp(App);
+const navi = createApp(Navi);
 
-app.use(globals).use(router).mount('#app')
-navi.use(globals).use(router).mount("#navi")
+app.use(globals).use(router).mount('#app');
+navi.use(globals).use(router).mount("#navi");
