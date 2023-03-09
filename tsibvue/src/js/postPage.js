@@ -40,6 +40,16 @@ export default {
                 this.$router.push('/');
             }
         },
+    // 미디어 올리기 버튼
+        inputMedia: function () { // (임시)
+            let medias = this.$refs.medias.files;
+
+            let keys = Object.keys(medias);
+            keys.forEach(function (item){
+                console.log("↓↓ 테스트 중 입니다. " + (Number(item)+1) + "번 째 파일 정보 ↓↓");
+                console.log(medias[item]);
+            });
+        },
     // 저장 버튼
         savePost: function (event) {
             if (event) {
@@ -93,15 +103,6 @@ export default {
                     }
                 });
             }
-        },
-        inputMedia: function () {
-            // (임시)
-            let medias = this.$refs.medias.files
-
-            let keys = Object.keys(medias);
-            keys.forEach(function (item){
-                console.log(medias[item]);
-            });
         }
     }
 }
