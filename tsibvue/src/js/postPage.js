@@ -10,7 +10,7 @@ export default {
         }
     },
     mounted() {
-        this.hideNavi();
+        this.hideNavi(); // 페이지 진입 시 Navi 숨기기
     },
     watch: {
         '$route'(params) {
@@ -21,7 +21,7 @@ export default {
         if (!confirm('게시물이 저장되지 않았습니다. 나가시겠습니까?')) {
             next(false);
         } else {
-            this.showNavi();
+            this.showNavi(); // 페이지 이동 시 Navi 보이기
             next();
         }
     },
@@ -94,5 +94,14 @@ export default {
                 });
             }
         },
+        inputMedia: function () {
+            // (임시)
+            let medias = this.$refs.medias.files
+
+            let keys = Object.keys(medias);
+            keys.forEach(function (item){
+                console.log(medias[item]);
+            });
+        }
     }
 }

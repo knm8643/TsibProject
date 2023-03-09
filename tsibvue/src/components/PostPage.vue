@@ -17,9 +17,8 @@
           <input type="text" class="form-control" placeholder="" v-model="title">
           <label>제목</label>
         </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" placeholder="" v-model="media">
-          <label>사진</label>
+        <div class="mb-3">
+          <input class="form-control form-control-sm" id="formFileSm" type="file" @change="inputMedia()" multiple="multiple" ref="medias">
         </div>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" placeholder="" v-model="tag">
