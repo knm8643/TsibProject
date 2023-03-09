@@ -29,13 +29,12 @@
     <div class="noticeNavi">
       <div class="noticeNavi_body">
         <div id="noticeNaveButton">
-          <!-- 미완성 -->
-          <router-link to="/post" id="inputSpan2">
             <button>목록형</button>
-            <button>+</button>
-            <button>ㅁ</button>
-            <button>ㅇ</button>
-          </router-link>
+            <router-link to="/post" id="inputSpan2">
+              <button>＋</button>
+            </router-link>
+            <button>■</button>
+            <button>▣</button>
         </div>
       </div>
     </div>

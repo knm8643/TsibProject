@@ -10,7 +10,8 @@
       </div>
     </div>
     <div class="content-section">
-      중앙바디
+      중앙바디<br>
+      작업할거없다싶을때 만들어주세요★
     </div>
     <div class="image-section">
       <img src="../../public/teamPhoto/DevelopTeam(black).jpeg" alt="team photo">
