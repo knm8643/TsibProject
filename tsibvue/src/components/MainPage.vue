@@ -54,6 +54,7 @@
       </div>
     </div>
   </div>
+  <router-view></router-view>
 </template>
 <script>
 import mainPage from "@/js/mainPage.js";

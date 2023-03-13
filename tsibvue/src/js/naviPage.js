@@ -1,5 +1,7 @@
+import LoginPage from '@/components/LoginPage.vue'
 export default {
     name: "naviPage",
+    components: { LoginPage },
     data(){
         return{}
     },

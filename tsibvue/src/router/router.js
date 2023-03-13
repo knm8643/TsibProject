@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import customer from "@/router/customer.js";
+import loginPage from "@/components/LoginPage.vue"
 
 const routes = [
     {
@@ -10,7 +11,10 @@ const routes = [
     {
         path: '/',
         name: 'main',
-        component: () => import(/* webpackChunkName: "/main" */ '@/components/MainPage.vue')
+        component: () => import(/* webpackChunkName: "/main" */ '@/components/MainPage.vue'),
+        children:[
+            { path: 'login' , component : loginPage}
+        ]
     },
     {
         path: '/credit',
