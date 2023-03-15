@@ -12,8 +12,14 @@
       <input type="file" id="user-img-upload" @change="handleUserImgChange">
     </div>
       <!-- myPageNavi -->
-     <div>
-
+     <div class="myPageNavie">
+       <div class="navieIntro">
+         <img src="../../public/examplePhoto/example11.jpg">
+         <span>김영찬님</span>
+       </div>
+       <div>
+         <span>게시판</span>
+       </div>
      </div>
       <!-- board -->
      <div>
