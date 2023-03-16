@@ -122,3 +122,18 @@
 .board {
   margin-left: 20px;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container > div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin: 10px;
+  text-align: center;
+}
+
