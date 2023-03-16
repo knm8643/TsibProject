@@ -37,7 +37,7 @@ public class BoardController {
     }
 
     // Save
-    @PostMapping
+    @PostMapping("/write")
     public String savePost(String title, String media, String tag, String content){
         BoardDTO boardDTO = new BoardDTO();
 
@@ -57,43 +57,16 @@ public class BoardController {
             System.out.println(media_test);
             System.out.println(tag_test);
             System.out.println(content_test);
+
+            String test = "spring savePost success";
+
+            return test;
         } else {
             System.out.println("[임시저장] BoardService, BoardDAO 실패");
         }
 
-        String test = "저장 임시값"; // (임시)
+        String tmp = "spring savePost fail";
 
-        return test;
-    }
-
-    // SaveTmp
-    @PostMapping("/tmp")
-    public String savePostTmp(String title, String media, String tag, String content){
-        BoardDTO boardDTO = new BoardDTO();
-
-        boardDTO.setTitleTmp(title);
-        boardDTO.setMediaTmp(media);
-        boardDTO.setTagTmp(tag);
-        boardDTO.setContentTmp(content);
-
-        String titleTmp = boardDTO.getTitleTmp();
-        String mediaTmp = boardDTO.getMediaTmp();
-        String tagTmp = boardDTO.getTagTmp();
-        String contentTmp = boardDTO.getContentTmp();
-
-        if (boardService.savePostTmp(titleTmp, mediaTmp, tagTmp, contentTmp) == 01) {
-            System.out.println("[임시저장] BoardController, BoardService, BoardDTO, BoardDAO 테스트 완료");
-            System.out.println(titleTmp);
-            System.out.println(mediaTmp);
-            System.out.println(tagTmp);
-            System.out.println(contentTmp);
-        } else {
-            System.out.println("[임시저장] BoardService, BoardDAO 실패");
-
-        }
-
-        String test = "임시저장 리턴값 "; // (임시)
-
-        return test;
+        return tmp;
     }
 }
