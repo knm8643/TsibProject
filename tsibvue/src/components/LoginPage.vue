@@ -41,6 +41,7 @@
 <script>
 import loginPage from "@/js/loginPage.js";
 export default loginPage
+
 </script>
 
 <style scoped>
