@@ -61,7 +61,7 @@ export default {
                 }
 
                 this.$axios({
-                    url: "/board",
+                    url: "/board/write",
                     method: "post",
                     params: postData
                 }).then(function (response) {
@@ -79,30 +79,7 @@ export default {
         },
     // 임시저장 버튼
         savePostTmp: function (event) {
-            if (event) {
-                let postData = {
-                    title: this.title,
-                    media: this.media,
-                    tag: this.tag,
-                    content: this.content
-                }
-
-                this.$axios({
-                    url: "/board/tmp",
-                    method: "post",
-                    params: postData
-                }).then(function (response) {
-                    alert("success");
-                    if (response) {
-                        console.log(response);
-                    }
-                }).catch(function (error) {
-                    alert("fail");
-                    if (error) {
-                        console.log(error);
-                    }
-                });
-            }
+            console.log('savePostTmp');
         }
     }
 }

@@ -22,9 +22,4 @@ public class BoardService {
     public int savePost(String title, String media, String tag, String content){
         return boardDAO.savePost(title, media, tag, content);
     }
-
-    // PostPage saveTmp
-    public int savePostTmp(String title, String media, String tag, String content){
-        return boardDAO.savePostTmp(title, media, tag, content);
-    }
 }
