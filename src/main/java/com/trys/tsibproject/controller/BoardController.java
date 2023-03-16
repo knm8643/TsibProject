@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 // PostPage Controller
 @Controller
 @RequestMapping("/board")
+@CrossOrigin("*")
 public class BoardController {
 
     @Autowired
