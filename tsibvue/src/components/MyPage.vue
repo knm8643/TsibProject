@@ -18,7 +18,9 @@
          <span>김영찬님</span>
        </div>
        <div>
-         <span>게시판</span>
+         <span>게시판1</span>
+         <span>게시판2</span>
+         <span>게시판3</span>
        </div>
      </div>
       <!-- board -->
