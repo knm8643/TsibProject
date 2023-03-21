@@ -78,7 +78,7 @@ export default {
             }
         },
     // 임시저장 버튼
-        savePostTmp: function (event) {
+        savePostTmp: function () {
             console.log('savePostTmp');
         }
     }

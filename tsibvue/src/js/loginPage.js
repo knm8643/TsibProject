@@ -12,8 +12,13 @@ export default {
         $('#login-modal').modal('show');
     },
     methods: {
-        ...mapActions(['login']),     //vuex/actions에 있는 login 함수
+        // 아래 펑션 호출을 지우면 X버든 눌렀을때 로그인 모달팝업창이 안닫혀...
+        closeModal() {
+            $('#login-modal').modal('hide');
+            window.history.back();
+        },
 
+        ...mapActions(['login']),     //vuex/actions에 있는 login 함수
         async fnLogin() {       //async 함수로 변경
             if (this.user_id === '') {
                 alert('ID를 입력하세요.')
