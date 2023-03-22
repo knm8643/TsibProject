@@ -24,15 +24,8 @@
        </div>
      </div>
       <!-- board -->
-    <div class="container">
-       <div>위치확인1</div>
-       <div>위치확인2</div>
-       <div>위치확인3</div>
-       <div>위치확인4</div>
-       <div>위치확인5</div>
-       <div>위치확인6</div>
-       <div>위치확인7</div>
-       <div>위치확인8</div>
+    <div class="container" v-for="(noticeTestlist, index) in noticeTestlist" v-bind:key="index">
+       <div>v-for 위치확인 {{index}}</div>
      </div>
   </div>
 </template>

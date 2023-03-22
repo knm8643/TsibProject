@@ -107,7 +107,7 @@
 }
 
 .myPageNavie > div:last-child span {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -130,9 +130,10 @@
 }
 
 .container > div {
+  color: white;
   width: 100px;
   height: 100px;
-  background-color: lightblue;
+  background-color: rgba(54, 70, 77, 1);
   margin: 10px;
   text-align: center;
 }
