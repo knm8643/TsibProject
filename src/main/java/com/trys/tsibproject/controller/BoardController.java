@@ -19,25 +19,7 @@ public class BoardController {
     @Autowired
     private BoardDAO dao;
 
-    @PostMapping("/inputBoard")
-    @ResponseBody
-    public int inputBoard(String userName){
-        if(userName == null && userName.equals("")){
-            return 01;
-        } else {
-            boardService.boardInsert(userName);
-        }
-        return 02;
-    }
-
-    @GetMapping("/selectBoard")
-    @ResponseBody
-    public int selectBoard(String sendData){
-        System.out.println("-- 메인페이지 진입 성공 --");
-        return 01;
-    }
-
-    // Save
+    // 게시물 저장하기
     @PostMapping("/write")
     @ResponseBody
     public String savePost(String title, String media, String tag, String content){
