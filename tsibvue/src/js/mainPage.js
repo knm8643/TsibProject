@@ -38,9 +38,11 @@ export default {
                 ]
             /* 더미데이터(영찬이 작업시 삭제 예정) */
             this.$axios({
-                url : ""
+                url : "/main/load-post",
+                method : "get"
             }).then(function (response){ // eslint-disable-line no-unused-vars
                 console.log('페이지 최초 접속시 작동');
+                console.log(response);
             }).catch(function (error) {
                 console.log(error);
             })
