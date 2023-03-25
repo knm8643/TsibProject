@@ -39,6 +39,7 @@ public class BoardController {
 
     // Save
     @PostMapping("/write")
+    @ResponseBody
     public String savePost(String title, String media, String tag, String content){
         BoardDTO boardDTO = new BoardDTO();
 
@@ -52,22 +53,8 @@ public class BoardController {
         String tag_test = boardDTO.getTag();
         String content_test = boardDTO.getContent();
 
-        if (boardService.savePost(title_test, media_test, tag_test, content_test) == 01) {
-            System.out.println("[저장] BoardController, BoardService, BoardDTO, BoardDAO 테스트 완료");
-            System.out.println(title_test);
-            System.out.println(media_test);
-            System.out.println(tag_test);
-            System.out.println(content_test);
+        boardService.savePost(title_test, media_test, tag_test, content_test);
 
-            String test = "spring savePost success";
-
-            return test;
-        } else {
-            System.out.println("[임시저장] BoardService, BoardDAO 실패");
-        }
-
-        String tmp = "spring savePost fail";
-
-        return tmp;
+        return "저장되었습니다.";
     }
 }

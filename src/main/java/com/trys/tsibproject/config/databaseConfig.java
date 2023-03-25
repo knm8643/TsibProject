@@ -36,7 +36,7 @@ public class databaseConfig {
     }
 
     @Bean
-    public boardMapper springBoardMapper(SqlSessionTemplate sqlSessionTemplate) {
+    public boardMapper boardMapper(SqlSessionTemplate sqlSessionTemplate) {
         return sqlSessionTemplate.getMapper(boardMapper.class);
     }
 }
