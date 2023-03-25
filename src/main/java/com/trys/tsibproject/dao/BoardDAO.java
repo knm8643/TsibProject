@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class BoardDAO {
     @Autowired
-    private boardMapper boardTestMapper;
+    private boardMapper boardMapper;
 
     // PostPage save
     public int savePost(String title, String media, String tag, String content){
-        return boardTestMapper.postSaveMapper(title, media, tag, content);
+        return boardMapper.postSaveMapper(title, media, tag, content);
     }
 }
