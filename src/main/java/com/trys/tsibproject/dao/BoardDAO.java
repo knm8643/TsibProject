@@ -11,6 +11,6 @@ public class BoardDAO {
 
     // PostPage save
     public int savePost(String title, String media, String tag, String content){
-        return boardMapper.postSaveMapper(title, media, tag, content);
+        return boardMapper.savePostMapper(title, media, tag, content);
     }
 }
