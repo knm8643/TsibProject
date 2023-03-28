@@ -16,9 +16,6 @@ public class BoardController {
     @Autowired
     private BoardService boardService;
 
-    @Autowired
-    private BoardDAO dao;
-
     // 게시물 저장하기
     @PostMapping("/write")
     @ResponseBody

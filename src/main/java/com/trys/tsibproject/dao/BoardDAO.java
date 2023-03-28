@@ -1,8 +1,9 @@
 package com.trys.tsibproject.dao;
 
-import com.trys.tsibproject.mapper.boardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import com.trys.tsibproject.mapper.boardMapper;
 
 @Repository
 public class BoardDAO {

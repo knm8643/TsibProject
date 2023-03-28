@@ -10,6 +10,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.trys.tsibproject.mapper.boardMapper;
+import com.trys.tsibproject.mapper.mainMapper;
 
 import javax.sql.DataSource;
 
@@ -38,5 +39,10 @@ public class databaseConfig {
     @Bean
     public boardMapper boardMapper(SqlSessionTemplate sqlSessionTemplate) {
         return sqlSessionTemplate.getMapper(boardMapper.class);
+    }
+
+    @Bean
+    public mainMapper mainMapper(SqlSessionTemplate sqlSessionTemplate) {
+        return sqlSessionTemplate.getMapper(mainMapper.class);
     }
 }
