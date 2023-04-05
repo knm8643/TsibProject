@@ -1,9 +1,11 @@
 
 ## 블로그 만드는 블로그
 
+npm install swiper (2023.04.05)
+
 ```
 # 사용언어
-- Java, JavaScript, MySql, Vue3Js, SpringBoot, test3
+- Java, JavaScript, MySql, Vue3Js, SpringBoot
 ```
 
 ```

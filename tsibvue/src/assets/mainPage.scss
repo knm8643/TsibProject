@@ -1,3 +1,25 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide-prev{
+  display: block;
+}
+
+.swiper-slide-active {
+  display: block;
+}
+
 /* 변동 CSS*/
 // 게시판 출력
 #noticeBox {
@@ -31,7 +53,7 @@
 }
 
 .carousel-photo {
-  width: 200px;
+  width: 100%;
   height: 350px;
   z-index: 1;
   object-fit: cover;
